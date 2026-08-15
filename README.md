@@ -1,14 +1,22 @@
-# David Moro Fernandez | Professional Portfolio
+# Julio Ponder Seneres | Enterprise Infrastructure Template
 
-This is the official professional portfolio for **David Moro Fernandez**, highlighting his leadership in strategic architecture, fintech innovation (CTO Banco Atlántida), and digital governance within the Grupo Financiero Atlántida ecosystem.
+This is an official demo template for **Julio Ponder Seneres**, showcasing a high-performance enterprise portfolio for CAO-level leadership in banking, fintech, and corporate operations within the **Contra Atlantis Group** ecosystem.
+
+> **DISCLAIMER**: This is a fictional portfolio template, demo site, and developer showcase.  
+> "Julio Ponder Seneres" and "Contra Atlantis Group" are not real people or companies.  
+> Built by **Legit Creations** to demonstrate high-level developer experience, Next.js 16, and enterprise UI/UX.
 
 ## 🏛 Project Overview
-A high-performance web application designed to reflect the **Strategic Portfolio of the CTO Atlantis Bank**. The site balances a luxury aesthetic (KONCEPTO Décor) with technical rigor, featuring interactive mapping and on-the-fly document generation.
+A luxury + technical web application designed as a **Strategic Infrastructure Portfolio Template**.  
+The site balances an executive aesthetic with engineering rigor. Includes modules for HR, Procurement, Admin Portal, and Fintech Ops dashboards.
+
+Use cases: 
+`portfolio template` `executive website` `banking demo` `fintech SaaS landing` `CAO/C-suite experience site`
 
 ## 🛠 Tech Stack
 
 ### Core
-* **Framework:** [Next.js 16.1](https://nextjs.org/) (App Router)
+* **Framework:** [Next.js 16.2](https://nextjs.org/) (App Router + Server Components)
 * **Library:** [React 19](https://react.dev/)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
 
@@ -16,6 +24,12 @@ A high-performance web application designed to reflect the **Strategic Portfolio
 * **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 * **Animations:** [Framer Motion](https://www.framer.com/motion/)
 * **Icons:** [Lucide React](https://lucide.dev/)
+* **Charts:** [Recharts](https://recharts.org/)
+
+### Infrastructure
+* **Database:** [@neondatabase/serverless](https://neon.tech/) - Postgres
+* **Analytics:** [@vercel/speed-insights](https://vercel.com/docs/speed-insights)
+* **Hosting:** Vercel
 
 ---
 
@@ -28,31 +42,4 @@ A high-performance web application designed to reflect the **Strategic Portfolio
 ### Installation
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/legitking4pf/DMF.git](https://github.com/legitking4pf/DMF.git)
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-3.  **Run Development Server:**
-    ```bash
-    npm run dev
-    ```
-
----
-
-## 🏗 Key Features
-* **Dynamic Hero UI:** A high-impact landing experience built with Framer Motion.
-* **Digital Sovereignty:** Engineered for performance, security, and scalability.
-* **Fintech Core Migration Insights:** Integrated case studies/details on regional financial architecture.
----
-
-## 📝 Scripts
-* `npm run dev`: Starts the Next.js development server.
-* `npm run build`: Creates an optimized production build.
-* `npm run lint`: Runs ESLint to ensure code quality.
-
----
-
-## 🛡 License
-**Private & Confidential.** Developed by **(Legit Creations)** for Author David Moro Fernandez. All rights reserved.
+    git clone https://github.com/legitking4pf/jps-contra-atlantis-template.git

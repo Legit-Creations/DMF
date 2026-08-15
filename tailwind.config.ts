@@ -5,11 +5,12 @@ import type {
 
 const config: Config = {
   content: [
+    "./**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
     "./src/app/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
     "./src/types/**/*.{ts,tsx}",
     "./src/data/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"
   ],
   theme: {
     extend: {

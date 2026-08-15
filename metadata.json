@@ -1,77 +1,54 @@
 {
   "identity": {
-    "name": "David Moro Fernandez",
-    "short_name": "DMF",
-    "site_name": "David Moro,
+    "name": "Julio Ponder Seneres",
+    "short_name": "JPS",
+    "site_name": "Julio Ponder",
     "organizations": [{
-      "company": "Grupo Financiero Atlántida",
-      "url": "https://grupofinancieroatlantida.com"
+      "company": "Contra Atlantis Group"
     },
       {
-        "company": "Banco Atlántida Honduras",
-        "url": "https://bancatlan.hn"
-      },
-      {
-        "company": "Telefonica Empresas",
-        "url": "https://www.telefonicaempresas.es/"
+        "company": "Contra honduran Bank"
       }],
     "roles": [{
-      "Chief Administrative Officer": "Grupo Financiero Atlántida"
+      "Chief Administrative Officer": "Contra Atlantis Group"
     },
       {
-        "Chief Technology Officer": "Banco Atlántida Honduras"
-      },
-      {
-        "Head, Service Platforms & Voice Core Network": "Telefonica Empresas"
+        "Governing Member - Advisory Board": "Contra Honduran Bank"
       }]
   },
-  "description": "Chief Technology Officer at Banco Atlántida Honduras. Governing Member - Advisory Board at Grupo Financiero Atlántida.",
+  "description": "Chief Administrative Officer at Contra Atlantis Group. Leading Admin, HR, Procurement & Corporate Operations for Bank and Fintech infrastructure in Atlántida, Honduras.",
   "seo": {
-    "display_title": "David Moro Fernandez | CAO Grupo Financiero Atlántida",
+    "display_title": "Julio Ponder Seneres | CAO Contra Atlantis Group",
     "keywords": [
-      "David Moro Fernandez",
-      "David Moro",
-      "DMF",
-      "CAO Grupo Financiero Atlantida",
-      "GFA",
-      "Banco Atlantida",
-      "Banco Atlantida Honduras",
-      "Grupo Financiero Atlantida",
+      "Julio Ponder Seneres",
+      "Julio Ponder",
+      "JPS",
+      "CAO Contra Atlantis Group",
+      "Contra Atlantis Group",
+      "Banco Contra Atlantis",
+      "Banco Contra Atlantis Honduras",
       "Chief Administrative Officer",
-      "Digital Banking Executive, Fintech Leader",
-      "Core Banking Migration",
-      "Digital Sovereignty",
+      "Banking Infrastructure Honduras",
+      "Fintech Honduras",
+      "Core Banking Operations",
+      "HR Operations",
+      "Procurement",
+      "Admin Operations",
+      "Digital Banking",
       "Bank Digital Transformation",
       "Banking Honduras",
-      "Banking El Salvador",
       "Central America Financial Services",
-      "Investment Banking Central America",
-      "Spanish Business Leader",
-      "Spanish Entrepreneur",
-      "Madrid Business Executive",
-      "European Business Latin America",
-      "Advisory Board Member",
-      "Wealth Management",
-      "Wealth Acceleration",
-      "Bank Strategy 2030",
-      "GFA Strategic Vision",
-      "KONCEPTO Decor Founder",
-      "Telefonica Empresas",
-      "Young Entrepreneurs Spain",
-      "Fintech Investment",
-      "Bank Modernization",
-      "Financial Inclusion",
-      "Entrepreneurship LATAM"
+      "Corporate Operations",
+      "Atlántida Honduras"
     ]
-  }
-  "social": {
-    "og_title": "David Moro Fernandez",
-    "og_type": "website",
-    "og_image": ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"]
   },
-
+  "social": {
+    "og_title": "Julio Ponder Seneres",
+    "og_type": "website",
+    "og_image": ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_og_banner.jpg"]
+  },
   "config": {
     "theme_color": "#A67C00",
-    "last_updated": "2026-02-17"
+    "last_updated": "2026-08-15"
   }
 }

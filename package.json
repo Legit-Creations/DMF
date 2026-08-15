@@ -1,23 +1,26 @@
 {
-  "name": "David Moro Fernandez",
-  "description": "Professional portfolio of David Moro Fernandez: Strategic architecture, fintech innovation, and digital governance within the Grupo Financiero Atlántida ecosystem.",
+  "name": "jps-contra-atlantis-portal",
+  "description": "Professional infrastructure portal of Julio Ponder Seneres: Administrative operations, fintech governance, and core banking architecture within the Contra Atlantis Group ecosystem.",
   "keywords": [
-    "David Moro Fernandez",
-    "CAO Grupo Financiero Atlantida",
-    "Banco Atlantida",
-    "Digital Banking Honduras",
-    "Fintech Core Migration",
-    "Digital Sovereignty",
-    "Spanish Entrepreneur Central America",
-    "GFA Strategic Vision 2030",
-    "Wealth Management El Salvador"
+    "Julio Ponder Seneres",
+    "CAO Contra Atlantis Group",
+    "Banco Contra Atlantis",
+    "Banking Infrastructure Honduras",
+    "Fintech Core Operations",
+    "Admin Operations",
+    "HR Portal",
+    "Procurement System",
+    "Corporate Governance",
+    "Contra Atlantis Group Strategic Vision",
+    "Banking Honduras",
+    "Central America Fintech"
   ],
   "version": "2.0.1",
   "private": true,
   "type": "module",
   "authors": [
-    "Grupo Financiero Atlantida",
-    "David Moro Fernandez"
+    "Contra Atlantis Group",
+    "Julio Ponder Seneres"
   ],
   "scripts": {
     "dev": "next dev",
