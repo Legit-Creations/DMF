@@ -109,7 +109,7 @@ export default function ExecutiveGallery() {
           <div className="flex items-center gap-4 mb-12">
             <Camera className="text-gold w-4 h-4" />
             <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">
-              From the Board Gallery
+              Julio Ponder S Gallery
             </span>
           </div>
 

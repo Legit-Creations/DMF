@@ -14,17 +14,17 @@ import Link from 'next/link';
 export default function ExecutiveProfile() {
   const positions = [{
     role: "Chief Administration Officer",
-    url: "",
+    url: "#",
     company: "Contra Atlantis Group",
     tag: "Institutional Governance",
     ref: "CAG-CAO-2026"
   },
     {
       role: "Chief Technology Officer",
-      url: "",
+      url: "#",
       company: "Contra Bobble Bank",
       tag: "Digital Infrastructure",
-     ref : "CBC-CTO-2026"
+     ref : "CBB-CTO-2026"
     },
     {
       role: "Founder & Creative Lead",

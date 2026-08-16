@@ -89,7 +89,7 @@ const EcosystemContent = () => {
             >
             <div className="flex items-center gap-4 mb-12">
               <Building2 className="text-gold w-4 h-4" />
-              <span className="text-gold-light font-bold tracking-[0.6em] text-[10px] uppercase">
+              <span className="text-gold-light font-bold tracking-[0.5em] text-[10px] uppercase">
                 JULIO's Leadership Assets
               </span>
             </div>
@@ -98,9 +98,9 @@ const EcosystemContent = () => {
               initial={ { opacity: 0, y: 30 }}
               whileInView={ { opacity: 1, y: 0 }}
               transition={ { duration: 0.8 }}
-              className="text-3xl md:text-6xl font-display italic font-serif tracking-tighter leading-none mb-12"
+              className="text-3xl md:text-6xl font-serif italic text-obsidian tracking-tighter leading-[1.1]"
               >
-              Institutional <br /> <span className="text-gold font-bold uppercase">Ecosystems</span>
+              Institutional <br /> <span className="not-italic text-gold font-bold uppercase">Ecosystems</span>
           </MotionH2>
 
           <p className="text-white/80 text-justify text-base md:text-xl font-light leading-relaxed max-w-xl">

@@ -7,8 +7,8 @@ import {
 import {
   ArrowUpRight,
   Clock,
-  ShieldCheck,
-  FileText
+  FileText,
+  Newspaper 
 } from 'lucide-react';
 
 const ledgerData = [{
@@ -54,13 +54,13 @@ export default function ExecutiveLedger() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-24 border-b border-obsidian/10 pb-12">
           <div className="space-y-4">
             <div className="flex mb-12 items-center gap-3">
-              <ShieldCheck className="text-gold w-4 h-4" />
-              <span className="text-gold font-bold text-[10px] uppercase tracking-[0.5em]">Feeds-Direct blog space</span>
+              <Newspaper className="text-gold w-4 h-4" />
+              <span className="text-gold font-bold text-[10px] uppercase tracking-[0.5em]">Feeds-Direct blog</span>
             </div>
             <motion.h2 initial={ { opacity: 0, y: 30 }}
               whileInView={ { opacity: 1, y: 0 }}
-              transition={ { duration: 0.8 }} className="text-3xl md:text-6xl font-serif tracking-tighter leading-[1.1]"><span className="italic font-light">Executive</span> <br />
-            <span className="font-bold">Ledger</span>
+              transition={ { duration: 0.8 }} className="text-3xl md:text-6xl font-serif italic text-obsidian tracking-tighter leading-[1.1]">Executive</span> <br />
+            <span className="not-italic text-gold font-bold uppercase">Ledger</span>
           </motion.h2>
         </div>
         <div className="max-w-xs space-y-4">
