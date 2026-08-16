@@ -8,7 +8,8 @@ import {
   Palette,
   Globe,
   ArrowUpRight,
-  Fingerprint
+  Fingerprint,
+  Building2
 } from 'lucide-react';
 import NextImage from 'next/image';
 import Link from 'next/link';
