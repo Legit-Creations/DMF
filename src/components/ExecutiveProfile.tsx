@@ -17,21 +17,21 @@ export default function ExecutiveProfile() {
     url: "",
     company: "Contra Atlantis Group",
     tag: "Institutional Governance",
-    : "CAG-CAO-2026"
+    ref: "CAG-CAO-2026"
   },
     {
       role: "Chief Technology Officer",
       url: "",
       company: "Contra Bobble Bank",
       tag: "Digital Infrastructure",
-      : "CBC-CTO-2026"
+     ref : "CBC-CTO-2026"
     },
     {
       role: "Founder & Creative Lead",
       url: "https://legitcreations.com.ng",
       company: "LEGIT CREATIONS LTD",
       tag: "Technology & Consultant company",
-      : "RC-CAC-9721319"
+      ref : "RC-CAC-9721319"
     }];
 
   return (
@@ -71,7 +71,7 @@ export default function ExecutiveProfile() {
               Julio Ponder Seneres
             </p>
             <div className="flex items-center lg:justify-end gap-3 text-gold/60 text-[11px] font-mono tracking-widest uppercase font-bold">
-              <Fingerprint size={14} /> : JPS-CAG
+              <Fingerprint size={14} /> Ref: JPS-CAG
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function ExecutiveProfile() {
                       {pos.role}
                     </h3>
                     <p className="flex items-center lg:justify-end gap-3 text-gold/60 text-xs font-mono tracking-widest uppercase font-bold group-hover:text-gold transition-colors">
-                      ID: {pos.}
+                      ID: {pos.ref}
                     </p>
                   </div>
                 </div>
