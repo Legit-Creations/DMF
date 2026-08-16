@@ -121,7 +121,7 @@ const GalleryContent = () => {
     [next]);
 
   return (
-    <section id="gfagallery" className="bg-bone py-24 md:py-40 border-t border-obsidian/5 overflow-hidden">
+    <section id="gfagallery" className="bg-bone py-24 md:py-40 border-t border-obsidian/5 overflow-hidden w-full">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-3xl">

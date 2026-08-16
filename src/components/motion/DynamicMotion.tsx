@@ -6,12 +6,16 @@ const loading = () => <div className="opacity-0" />;
 
 const MotionDiv = dynamic(
   () => import('framer-motion').then((mod) => mod.motion.div),
-  { ssr: true, loading }
+  {
+    ssr: true, loading
+  }
 );
 
 const MotionMain = dynamic(
   () => import('framer-motion').then((mod) => mod.motion.main),
-  { ssr: true, loading }
+  {
+    ssr: true, loading
+  }
 );
 
 // Exports
