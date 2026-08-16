@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
           <div className="flex items-center gap-2 mb-2 md:mb-0">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span>Systems Nominal // DMF Contact Core</span>
+            <span>SYSTEM OPERATIONAL // Julio P.S Contact Footer</span>
           </div>
           <div className="flex items-center gap-6">
             <span>Tegucigalpa (HQ)</span>
@@ -57,16 +57,16 @@ export default function Footer() {
                 transition={{ duration: 0.8 }} 
                 className="text-2xl font-serif text-white tracking-tight mb-2"
               >
-                David Moro Fernandez
+                Julio Ponder Seneres
               </motion.h2>
               <p className="text-xs text-[#c9a24a] uppercase tracking-[0.25em] font-bold">
-                CAO & CTO // Grupo Financiero Atlántida 
+                CAO & CTO // Contra Atlantis Group 
               </p>
             </div>
             
             <div className="space-y-4">
               <p className="text-sm text-gray-500 leading-relaxed">
-                Have a strategic briefing or feedback for the Executive Office?
+                Hey there! Have a strategic briefing or feedback for my portfolio or about the institution? You can click this next button below to open our feedback form to write us a message
               </p>
               <a 
                 href="/contact" 
@@ -77,10 +77,10 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-4">
-              <SocialLink href="https://hn.linkedin.com/company/grupofinancieroatlantida" icon={<Linkedin size={18} />} label="LinkedIn" />
+              <SocialLink href="" icon={<Linkedin size={18} />} label="LinkedIn" />
               {/* UPDATED: Instagram changed to Email */}
-              <SocialLink href="mailto: davidhambert4all@gmail.com" icon={<Mail size={18} />} label="Email Executive Office" />
-              <SocialLink href="https://services.zangi.com/dl/conversation/9087642828" icon={<MessageSquare size={18} />} label="Zangi" />
+              <SocialLink href="mailto: operations@legitcreations.com.ng" icon={<Mail size={18} />} label="Email Executive Office" />
+              <SocialLink href="https://services.zangi.com/dl/conversation/9087642828" icon={<Facebook size={18} />} label="Facebook" />
             </div>
           </div>
 
@@ -88,8 +88,8 @@ export default function Footer() {
           <div className="md:col-span-2 md:col-start-6 space-y-6">
             <h3 className="text-xs font-bold text-white uppercase tracking-[0.2em]">The Ecosystem</h3>
             <ul className="space-y-4 text-sm text-gray-400">
-              <FooterLink href="https://www.bancatlan.hn">Banco Atlántida</FooterLink>
-              <FooterLink href="#">KONCEPTO Décor</FooterLink>
+              <FooterLink href="#">CONTRA ATLANTIS GROUP </FooterLink>
+              <FooterLink href="#">Contra Bobble Bank</FooterLink>
               <FooterLink href="#">Wealth Acceleration</FooterLink>
             </ul>
           </div>
@@ -113,7 +113,7 @@ export default function Footer() {
               <address className="not-italic">
                 Centro Corporativo<br />
                 Tegucigalpa, Honduras<br />
-                <span className="text-xs text-gray-600 mt-2 block">Available 07:00 — 19:00 WAT</span>
+                <span className="text-xs text-gray-600 mt-2 block">Available 07:00 — 19:00 CAT</span>
               </address>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-xs text-gray-600">
             <span className="flex items-center gap-1">
-              <Copyright size={12} /> {currentYear} DMF Executive Office.
+              <Copyright size={12} /> {currentYear}  JPS Institutional Portfolio.
             </span>
             <span className="hidden md:inline text-white/10">|</span>
             <span>All Rights Reserved.</span>

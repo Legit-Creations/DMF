@@ -53,13 +53,13 @@ const GalleryContent = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-12">
               <Layers className="text-gold w-4 h-4" />
-              <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">DMF Asset Portfolio.</span>
+              <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">JPS Asset Portfolio.</span>
             </div>
             <h2 className="text-3xl md:text-6xl font-serif italic text-obsidian tracking-tighter leading-[1.1]">
               Company <br /> <span className="not-italic font-bold text-obsidian uppercase">Environments</span>
             </h2>
             <p className="mt-12 text-ash text-lg max-w-xl font-light leading-relaxed">
-              A comprehensive visualization of David Moro Fernandez, The Group and Subsidiaries physical and digital footprint, mapped under DMF Oversight.
+              A comprehensive visualization of  our ATLANTIS GROUP and Subsidiaries physical and digital footprint, mapped under Administration Oversight Of the GROUP.
             </p>
           </div>
           <button 
@@ -134,8 +134,7 @@ const GalleryContent = () => {
              ))}
            </div>
            <div className="flex items-center gap-4 text-ash">
-              <ShieldCheck className="w-4 h-4 text-gold" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Verified Secure Repository // 2026</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Verified Secure_backed Assets</span>
            </div>
         </div>
       </div>

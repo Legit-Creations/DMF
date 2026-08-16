@@ -109,12 +109,12 @@ export default function ExecutiveGallery() {
           <div className="flex items-center gap-4 mb-12">
             <Camera className="text-gold w-4 h-4" />
             <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">
-              The CAO Gallery
+              From the Board Gallery
             </span>
           </div>
 
           <h1 className="text-4xl font-light text-obsidian mb-2 tracking-tight">
-            David Moro Fernandez
+            Julio Ponder Seneres
           </h1>
           <p className="text-[12px] uppercase tracking-[0.3em] text-gold/80 mb-8 font-medium">
             Chief Administrative Officer
@@ -122,7 +122,7 @@ export default function ExecutiveGallery() {
 
           <div className="space-y-6 text-lg font-light leading-relaxed mb-8 text-ash content-justify" lang="en">
             <p>
-              As the Chief Administrative Officer, David Moro Fernandez
+              As the Chief Administrative Officer, Julio Ponder Seneres
               stewards the institutional legacy and operational integrity
               of the organization. His leadership is defined by a commitment
               to structural clarity and the seamless integration of

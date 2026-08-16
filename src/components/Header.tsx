@@ -25,7 +25,7 @@ const NAV_ITEMS = [{
   id: "hero"
 },
   {
-    label: "DMF Gallery",
+    label: "Julio Gallery",
     id: "dmfgallery"
   },
   {
@@ -33,7 +33,7 @@ const NAV_ITEMS = [{
     id: "profile"
   },
   {
-    label: "GfA Gallery",
+    label: "CAG Gallery",
     id: "gfagallery"
   },
   {
@@ -100,7 +100,7 @@ export default function RefinedHeader() {
             </div>
             <div className="leading-tight sm:block">
               <div className="text-sm tracking-widest text-white font-medium">
-                PONDERS <span className="text-gold-light">F.</span>
+                JULIO <span className="text-gold-light">P.</span>
               </div>
               <div className="text-[9px] uppercase tracking-wider text-white/70">
                 Institutional Portfolio
@@ -161,11 +161,11 @@ export default function RefinedHeader() {
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold text-sm">
-                    DMF
+                    JPS
                   </div>
                   <div className="leading-tight">
                     <div className="text-sm tracking-widest text-white font-medium">
-                      MORO <span className="text-gold-light">F.</span>
+                      JULIO <span className="text-gold-light">P.</span>
                     </div>
                     <div className="text-[9px] uppercase tracking-wider text-white/40">
                       Menu Active
