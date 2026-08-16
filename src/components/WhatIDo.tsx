@@ -49,7 +49,7 @@ const specializations = [{
   },
   {
     title: "Technology & Consultant",
-    desc: "From Earth's enormous and growing new-age technology exploration, with modern advancement to innovation and use-case for every existing entrepreneurship sector that serves the human economic ecosystem. Southside West-Africa Organization, incorporated as LEGIT CREATIONS LTD., Legally registered and licensed to exist and operate as a multidisciplinary enterprise providing integrated Information, and Digital solutions across 3 'three' Business Sectors: TECHNOLOGY | COMMERCE | FINANCE
+    desc: "From Earth's enormous and growing new-age technology exploration, with modern advancement to innovation and use-case for every existing entrepreneurship sector that serves the human economic ecosystem. Southside West-Africa Organization, incorporated as LEGIT CREATIONS LTD., Legally registered and licensed to exist and operate as a multidisciplinary enterprise providing integrated Information, and Digital solutions across 3 'three' Business Sectors: TECHNOLOGY | COMMERCE | FINANCE",
     icon: <Palette className="w-5 h-5" />,
     role: "Founder & Principal Architect",
     metric: "Aesthetic Innovation",
