@@ -84,7 +84,7 @@ export default function ExecutiveProfile() {
             {positions.map((pos, idx) => (
               <motion.a
                 key={idx}
-                h={pos.url}
+                href={pos.url}
                 target="_blank"
                 rel="noopener noerrer"
                 initial={ { opacity: 0, x: -20 }}

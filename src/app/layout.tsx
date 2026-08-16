@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      site: "@ContraAtlantis",
+      site: "",
       // Update if you have one
       creator: "@ContraAtlantis",
       title: "Contra Atlantis Group",
