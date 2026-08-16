@@ -1,6 +1,10 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  Variants
+} from "framer-motion";
 import React from "react";
 
 interface RevealContainerProps {
@@ -16,13 +20,15 @@ export function RevealContainer({
 }: RevealContainerProps) {
   const shouldReduceMotion = useReducedMotion();
 
-  const containerVariants = {
-    hidden: { opacity: shouldReduceMotion ? 1 : 0 },
+  const containerVariants: Variants = {
+    hidden: {
+      opacity: shouldReduceMotion ? 1: 0
+    },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: shouldReduceMotion ? 0 : staggerDelay,
-        delayChildren: shouldReduceMotion ? 0 : 0.1,
+        staggerChildren: shouldReduceMotion ? 0: staggerDelay,
+        delayChildren: shouldReduceMotion ? 0: 0.1,
       },
     },
   };
@@ -33,7 +39,7 @@ export function RevealContainer({
       initial="hidden"
       animate="visible"
       className={className}
-    >
+      >
       {children}
     </motion.div>
   );
@@ -52,17 +58,21 @@ export function RevealLine({
 }: RevealLineProps) {
   const shouldReduceMotion = useReducedMotion();
 
-  const lineVariants = {
+  const lineVariants: Variants = {
     hidden: {
-      y: shouldReduceMotion ? "0%" : "100%",
-      opacity: shouldReduceMotion ? 1 : 0,
+      y: shouldReduceMotion ? "0%": "100%",
+      opacity: shouldReduceMotion ? 1: 0,
     },
     visible: {
       y: "0%",
       opacity: 1,
       transition: {
-        duration: shouldReduceMotion ? 0 : 0.9,
-        ease: [0.16, 1, 0.3, 1], // Cubic-bezier transform curve
+        duration: shouldReduceMotion ? 0: 0.9,
+        ease: [0.16,
+          1,
+          0.3,
+          1] as const,
+        // Added 'as const' to freeze tuple type
       },
     },
   };
