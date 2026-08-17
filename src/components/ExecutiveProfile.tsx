@@ -49,7 +49,7 @@ export default function ExecutiveProfile() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 
         {/* HEADER: Institutional Identity */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-12">
               <ShieldCheck className="text-gold w-4 h-4" />
@@ -119,7 +119,7 @@ export default function ExecutiveProfile() {
           </div>
 
           {/* NARRATIVE SECTION */}
-          <div className="mt-24 space-y-12">
+          <div className="mt-12 space-y-8">
             <h4 className="text-gold font-bold tracking-[0.6em] text-[10px] uppercase">Strategic Intent</h4>
             <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">
               Architecting the permanent system that bridge the gap between cloud-native governance and Spanish Modernist aesthetics.
@@ -130,7 +130,7 @@ export default function ExecutiveProfile() {
                 As a dual-mandate executive within the CAG ecosystem, Julio Ponder Seneres maintains a singular focus: the absolute elimination of operational friction. Through high-precision Digital Integration and administrative rigor, he secures the velocity of wealth across regional borders, aligning every milestone with a Strategic Growth Network built for long-term sustainability.
               </p>
               <p>
-                This philosophy extends into his curation of the physical realm via KONCEPTO Décor. Here, he employs architectural essentialism to curate minimalist environments that lect the structural integrity and high-end privacy of a well-governed financial system
+                This philosophy extends into his curation of the physical realm. Here, he employs architectural essentialism to curate minimalist environments that lecture the structural integrity and high-end privacy of a well-governed financial system
               </p>
             </div>
           </div>
@@ -139,15 +139,15 @@ export default function ExecutiveProfile() {
         {/* SIDEBAR: SYSTEM BENCHMARKS */}
         {/* SIDEBAR: EXECUTIVE MANIFESTO */}
         <div className="lg:col-span-4 flex flex-col">
-          <div className="relative p-0 border-t-[1px] border-obsidian/20 pt-12">
+          <div className="relative p-0 border-t-[1px] border-obsidian/20 mt-12">
             {/* Identification */}
             <div className="mb-12">
-              <h4 className="text-gold uppercase tracking-[0.4em] text-[10px] font-black mb-2">Institutional Manifesto</h4>
+              <h4 className="text-gold uppercase tracking-[0.4em] text-[10px] font-black mb-2">Entrepreneurship Manifesto</h4>
               <p className="text-[10px] font-mono text-ash/60 uppercase tracking-widest">
-                Document No. CAG-20dBz-STRAT
+                from his words
               </p>
             </div>
-            <div className="space-y-10 text-lg leading-relaxed text-ash antialiased content-justify font-light">
+            <div className="space-y-8 text-lg leading-relaxed text-ash antialiased content-justify font-light">
               <p>
                 The modernization of a century-old financial legacy does not occur through the mere adoption of software; it is a structural reimagining of how authority is exercised in a digital landscape. At the group level, my focus remains on the convergence of institutional trust and systemic velocity. We are building a sovereign framework that treats digital infrastructure not as a utility, but as a strategic asset—one that must be as resilient as the capital it protects.
               </p>
@@ -163,21 +163,6 @@ export default function ExecutiveProfile() {
               <p>
                 The future of wealth acceleration depends on this synthesis of governance and aesthetics. It is about creating systems that do not just function, but endure.
               </p>
-            </div>
-
-            {/* Verification Footer */}
-            <div className="mt-16 pt-10 border-t border-obsidian/5 flex items-center justify-between">
-              <div className="space-y-1">
-                <p className="text-[9px] uppercase tracking-[0.3em] font-bold text-gold">
-                  Validated for Release
-                </p>
-                <p className="text-[11px] font-display uppercase tracking-tighter text-obsidian">
-                  Administrative Office // CAG
-                </p>
-              </div>
-              <div className="opacity-10 grayscale">
-                <Fingerprint size={40} strokeWidth={1.0} />
-              </div>
             </div>
           </div>
         </div>

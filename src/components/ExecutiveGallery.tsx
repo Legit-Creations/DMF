@@ -54,10 +54,10 @@ export default function ExecutiveGallery() {
             </span>
           </div>
 
-          <h1 className="text-4xl font-light text-obsidian mb-2 tracking-tight">
+          <h1 className="text-4xl font-light text-obsidian mb-4 tracking-tight">
             Julio Ponder Seneres
           </h1>
-          <p className="text-[12px] uppercase tracking-[0.3em] text-gold/80 mb-8 font-medium">
+          <p className="text-[12px] uppercase tracking-[0.3em] text-gold/80 mb-12 font-medium">
             Chief Administrative Officer
           </p>
 
