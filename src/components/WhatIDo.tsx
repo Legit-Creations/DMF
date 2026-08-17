@@ -46,7 +46,7 @@ const specializations = [
     tag: "Contra Bobble Bank"
   },
   {
-    title: "Technology & Consulting",
+    title: "Technology Consulting",
     desc: "LEGIT CREATIONS LTD is a multidisciplinary enterprise legally registered to provide integrated Information and Digital solutions across three business sectors: TECHNOLOGY | COMMERCE | FINANCE.",
     icon: <Palette className="w-5 h-5" />,
     role: "Founder & Principal Architect",
@@ -104,7 +104,7 @@ const EcosystemContent = () => {
 
             {/* FIXED: Removed text-justify to prevent dynamic inline word spacing gaps */}
             <p className="text-white/80 text-left text-base md:text-lg font-light leading-relaxed max-w-xl">
-              Julio Ponder Seneres holds executive leadership and management authority across key institutional frameworks. He leads a comprehensive mandate driving <span className="text-white font-medium border-b border-gold/30">Digital Transformation</span> in banking and finance, alongside <span className="text-white font-medium border-b border-gold/30">Design Innovation</span> within commerce ecosystems—achieving significant strategic growth across the GFA / EBN Group.
+              Julio Ponder Seneres holds executive leadership and management authority across key institutional frameworks. He carry out a comprehensive mandate to driving <span className="text-white font-medium border-b border-gold/30">Digital Transformation</span> multiple innovation sectors: Technology, Commerce, and alongside <span className="text-white font-medium border-b border-gold/30">Finance  </span> across his Job field alongside their areas of operation.
             </p>
           </MotionDiv>
 
@@ -156,8 +156,7 @@ const EcosystemContent = () => {
                   </div>
                 </div>
 
-                <h3 className={`text-2xl md:text-4xl font-display mb-6 uppercase tracking-tighter leading-none transition-transform duration-500 group-hover:translate-x-2
-                  ${item.isDesign ? "font-serif italic text-white" : "text-white"}`}>
+                <h3 className="text-2xl md:text-4xl font-display mb-6 uppercase tracking-tighter leading-none text-white">
                   {item.title}
                 </h3>
 

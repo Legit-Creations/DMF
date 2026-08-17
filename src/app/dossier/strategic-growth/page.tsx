@@ -34,7 +34,7 @@ export default function CAODossier() {
         <div className="flex justify-between items-end">
           <div>
             <h1 className="text-huge font-display uppercase leading-[0.95] tracking-tight">
-              David Moro Fernandez
+              Julio Ponder Seneres
             </h1>
             <p className="uppercase text-xs tracking-[0.3em] text-neutral-300 mt-2">
   Chief Administrative Officer · Public Institutional Edition
@@ -111,7 +111,7 @@ export default function CAODossier() {
             <div className="h-[1px] w-12 bg-neutral-200 hidden md:block"></div>
             <p className="text-[9px] uppercase tracking-[0.3em] text-neutral-400">
               {/* Added fallback to avoid blank space during hydration */}
-              © {year || '2026'} Grupo Financiero Atlántida
+              © {year || '2026'} CONTRA ATLANTIS GROUP
             </p>
           </div>
         </div>
