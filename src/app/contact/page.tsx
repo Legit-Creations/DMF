@@ -48,49 +48,55 @@ export default function ExecutiveContact() {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState("");
 
-  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    if (!message.trim()) {
-      setError("Please provide a briefing before transmitting.");
-      return;
+  setSubmitting(true);
+  setError("");
+
+  const form = e.currentTarget;
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://formspree.io/f/xojnqyjg", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Formspree error:", data);
+
+      const message =
+        data?.errors?.map((item: { message?: string }) => item.message).join(", ") ||
+        data?.error ||
+        "Formspree rejected the submission.";
+
+      throw new Error(message);
     }
 
-    setSubmitting(true);
-    setError("");
+    console.log("Formspree success:", data);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    setSucceeded(true);
+    form.reset();
+    setMessage("");
+  } catch (error) {
+    console.error("Submission error:", error);
 
-    try {
-      const response = await fetch(
-        "https://formspree.io/f/xojnqyjg",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formData,
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Transmission failed.");
-      }
-
-      setSucceeded(true);
-      setMessage("");
-      form.reset();
-    } catch (err) {
-      console.error("Formspree submission error:", err);
-      setError(
-        "Transmission failed. Please verify your details and try again."
-      );
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
+    setError(
+      error instanceof Error
+        ? error.message
+        : "Unable to transmit inquiry."
+    );
+  } finally {
+    setSubmitting(false);
+  }
+};
   return (
     <main className="min-h-screen bg-[#050505] text-white selection:bg-gold/30">
 
