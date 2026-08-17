@@ -64,7 +64,7 @@ export default function Hero() {
             <RevealLine as="p" className="max-w-2xl text-stone-700 md:text-lg leading-relaxed font-light text-justify hyphens-auto">
               The professional portfolio of{" "}
               <strong className="font-semibold text-stone-900 border-b border-gold-300">
-                Julio P. Senderes
+                Julio P. Seneres
               </strong>
               . Architecting institutional-grade digital governance and fintech
               solutions for the global stage.

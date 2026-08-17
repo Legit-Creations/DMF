@@ -65,9 +65,6 @@ export default function CAODossier() {
           <Timeline />
         </div>
         
-        <div className="space-y-2">
-          <h2 className="text-sm uppercase tracking-widest text-neutral-400">Global Asset Footprint</h2>
-        </div>
       </section>
 
       <footer className="mt-40 border-t border-neutral-100 pt-16 pb-24">
