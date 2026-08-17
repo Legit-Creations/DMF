@@ -4,12 +4,9 @@ import {
 } from 'framer-motion';
 import {
   ArrowUpRight,
-  ArrowRight,
   ShieldCheck,
-  Fingerprint,
-  Activity
+  Fingerprint
 } from 'lucide-react';
-import Link from 'next/link';
 
 export default function ExecutiveProfile() {
   const positions = [{
@@ -59,7 +56,7 @@ export default function ExecutiveProfile() {
               initial={ { opacity: 0, y: 30 }}
               whileInView={ { opacity: 1, y: 0 }}
               transition={ { duration: 0.8 }}
-              className="text-3xl md:text-6xl font-serif italic tracking-tighter leading-[] mb-0"
+              className="text-3xl md:text-6xl font-serif italic tracking-tighter mb-0"
               >
               Strategic <br /> <span className="not-italic font-black text-obsidian uppercase">Sovereignty</span>
           </motion.h2>
@@ -78,7 +75,7 @@ export default function ExecutiveProfile() {
       </div>
 
       {/* THE POSITIONS LEDGER */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-8">
           <div className="space-y-0 border-t border-obsidian/20">
             {positions.map((pos, idx) => (
@@ -86,7 +83,7 @@ export default function ExecutiveProfile() {
                 key={idx}
                 href={pos.url}
                 target="_blank"
-                rel="noopener noerrer"
+                rel="noopener noreferrer"
                 initial={ { opacity: 0, x: -20 }}
                 whileInView={ { opacity: 1, x: 0 }}
                 transition={ { delay: idx * 0.15, duration: 0.8 }}
@@ -101,7 +98,7 @@ export default function ExecutiveProfile() {
                     <h3 className="text-2xl md:text-4xl font-display uppercase tracking-tight group-hover:text-gold transition-colors">
                       {pos.role}
                     </h3>
-                    <p className="flex items-center lg:justify-end gap-3 text-gold/60 text-xs font-mono tracking-widest uppercase font-bold group-hover:text-gold transition-colors">
+                    <p className="flex items-center gap-3 text-gold/60 text-xs font-mono tracking-widest uppercase font-bold group-hover:text-gold transition-colors mt-2">
                       ID: {pos.ref}
                     </p>
                   </div>
@@ -119,27 +116,26 @@ export default function ExecutiveProfile() {
           </div>
 
           {/* NARRATIVE SECTION */}
-          <div className="mt-12 space-y-8">
+          <div className="mt-16 space-y-8">
             <h4 className="text-gold font-bold tracking-[0.6em] text-[10px] uppercase">Strategic Intent</h4>
             <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">
-              Architecting the permanent system that bridge the gap between cloud-native governance and Spanish Modernist aesthetics.
+              Architecting the permanent system that bridges the gap between cloud-native governance and Spanish Modernist aesthetics.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-ash text-lg font-light leading-relaxed content-justify">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-ash text-lg font-light leading-relaxed text-justify">
               <p>
                 As a dual-mandate executive within the CAG ecosystem, Julio Ponder Seneres maintains a singular focus: the absolute elimination of operational friction. Through high-precision Digital Integration and administrative rigor, he secures the velocity of wealth across regional borders, aligning every milestone with a Strategic Growth Network built for long-term sustainability.
               </p>
               <p>
-                This philosophy extends into his curation of the physical realm. Here, he employs architectural essentialism to curate minimalist environments that lecture the structural integrity and high-end privacy of a well-governed financial system
+                This philosophy extends into his curation of the physical realm. Here, he employs architectural essentialism to curate minimalist environments that reflect the structural integrity and high-end privacy of a well-governed financial system.
               </p>
             </div>
           </div>
         </div>
 
-        {/* SIDEBAR: SYSTEM BENCHMARKS */}
         {/* SIDEBAR: EXECUTIVE MANIFESTO */}
-        <div className="lg:col-span-4 flex flex-col">
-          <div className="relative p-0 border-t-[1px] border-obsidian/20 mt-12">
+        <div className="lg:col-span-4 flex flex-col mt-12 lg:mt-0">
+          <div className="relative pt-8 border-t border-obsidian/20 lg:border-t-0 lg:pt-0">
             {/* Identification */}
             <div className="mb-12">
               <h4 className="text-gold uppercase tracking-[0.4em] text-[10px] font-black mb-2">Entrepreneurship Manifesto</h4>
@@ -147,7 +143,7 @@ export default function ExecutiveProfile() {
                 from his words
               </p>
             </div>
-            <div className="space-y-8 text-lg leading-relaxed text-ash antialiased content-justify font-light">
+            <div className="space-y-8 text-lg leading-relaxed text-ash antialiased text-justify font-light">
               <p>
                 The modernization of a century-old financial legacy does not occur through the mere adoption of software; it is a structural reimagining of how authority is exercised in a digital landscape. At the group level, my focus remains on the convergence of institutional trust and systemic velocity. We are building a sovereign framework that treats digital infrastructure not as a utility, but as a strategic asset—one that must be as resilient as the capital it protects.
               </p>
@@ -157,7 +153,7 @@ export default function ExecutiveProfile() {
               </p>
 
               <p>
-                This rigor is mirrored in my pursuit of architectural essentialism. Whether I am architecting a banking core or a physical environment through GUSSJIT, the objective is the same: the removal of the superfluous to expose the permanence of the form. We are moving away from the ephemeral trends of the industry, focusing instead on the creation of high-precision environments—both digital and physical—that lect the structural integrity required of a global financial leader.
+                This rigor is mirrored in my pursuit of architectural essentialism. Whether I am architecting a banking core or a physical environment through GUSSJIT, the objective is the same: the removal of the superfluous to expose the permanence of the form. We are moving away from the ephemeral trends of the industry, focusing instead on the creation of high-precision environments—both digital and physical—that reflect the structural integrity required of a global financial leader.
               </p>
 
               <p>
