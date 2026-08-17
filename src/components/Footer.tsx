@@ -13,7 +13,6 @@ import {
   Globe,
   ArrowUpRight,
   Mail,
-  // Swapped Instagram for Mail
   Facebook,
   Linkedin,
   ArrowUp,
@@ -39,22 +38,6 @@ export default function Footer() {
 
   return (
     <footer id="footer" className="bg-[#050505] text-white/80 font-sans border-t border-white/10 relative overflow-hidden">
-
-      {/* 1. TOP BAR: GLOBAL CONTEXT */}
-      <div className="border-b border-white/5 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
-          <div className="flex items-center gap-2 mb-2 md:mb-0">
-            <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span>SYSTEM OPERATIONAL // Julio P.S Contact Footer</span>
-          </div>
-          <div className="flex items-center gap-6">
-            <span>Tegucigalpa (HQ)</span>
-            <span className="hidden md:inline text-white/20">|</span>
-            <span>Central America</span>
-          </div>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
 
