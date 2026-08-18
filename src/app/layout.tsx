@@ -70,7 +70,7 @@ export const metadata: Metadata = {
       title: "Contra Atlantis Group | Banking & Fintech Infrastructure",
       description: "Enterprise infrastructure for Bank, Payments and Fintech. Admin, HR, Procurement & Operations led by Julio Ponder Seneres, CAO. Atlántida, Honduras.",
       images: [{
-        url: "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx",
+        url: "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/favicon.svg",
         // Replace with company banner
         width: 1200,
         height: 630,
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
       creator: "@ContraAtlantis",
       title: "Contra Atlantis Group",
       description: "Banking, Payments & Fintech Infrastructure in Atlántida, Honduras. Led by Julio Ponder Seneres, CAO.",
-      images: ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"],
+      images: ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.png"],
     },
     icons: {
       icon: [{
@@ -93,9 +93,9 @@ export const metadata: Metadata = {
         type: "image/x-icon"
       },
         {
-          url: "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/dmf_logo.png",
+          url: "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.png",
           type: "image/png",
-          sizes: "32x32"
+          
         },
       ],
       apple: [{
@@ -125,7 +125,7 @@ export const metadata: Metadata = {
       "url": "https://jponders.legitcreations.com.ng",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/dmf_logo.png"
+        "url": "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/favicon.svg",
       },
       "address": {
         "@type": "PostalAddress",
@@ -136,10 +136,6 @@ export const metadata: Metadata = {
         "@type": "Person",
         "name": "Julio Ponder Seneres"
       },
-      "sameAs": [
-        // "https://linkedin.com/company/contra-atlantis-group",
-        // "https://twitter.com/ContraAtlantis"
-      ]
     },
       {
         "@context": "https://schema.org",
@@ -151,7 +147,7 @@ export const metadata: Metadata = {
           "@id": "https://jponders.legitcreations.com.ng/#organization"
         },
         "url": "https://jponders.legitcreations.com.ng",
-        "image": "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx",
+        "image": "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx.jpg",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Atlántida",

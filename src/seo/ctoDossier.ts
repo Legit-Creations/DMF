@@ -53,7 +53,7 @@ export const ctoDossierMetadata: Metadata = {
     images: [
       {
         url:
-          'https://jponders.legitcreations.com.ng/og/cto-dossier.jpg',
+'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.png',
 
         width: 1200,
         height: 630,
@@ -74,7 +74,7 @@ export const ctoDossierMetadata: Metadata = {
       'Public institutional CTO dossier covering digital integration, infrastructure, cybersecurity, data systems, and technology governance.',
 
     images: [
-      'https://jponders.legitcreations.com.ng/og/cto-dossier.jpg',
+      'https://jponders.legitcreations.com.ng/og/jps_logo.png',
     ],
   },
 

@@ -54,8 +54,7 @@ export const julioPonderMetadata: Metadata = {
 
     images: [
       {
-        url:
-          'https://jponders.legitcreations.com.ng/og/julio-ponder-dossier.jpg',
+        url: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx.jpg',
         width: 1200,
         height: 630,
         alt:
@@ -74,7 +73,7 @@ export const julioPonderMetadata: Metadata = {
       'Institutional profile covering strategic governance, investment, risk, international expansion, and AI oversight.',
 
     images: [
-      'https://jponders.legitcreations.com.ng/og/julio-ponder-dossier.jpg',
+      'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx.jpg',
     ],
   },
 };
