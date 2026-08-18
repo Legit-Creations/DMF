@@ -12,20 +12,20 @@ interface GalleryItem {
 }
 
 const galleryData: GalleryItem[] = [
-  { id: 1, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/main.png', type: 'hero' },
-  { id: 2, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/2.jpg', type: 'standard' },
-  { id: 3, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/3.jpg', type: 'standard' },
-  { id: 4, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/4.jpg', type: 'standard' },
-  { id: 5, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/5.jpg', type: 'standard' },
-  { id: 6, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/6.png', type: 'normal' },
-  { id: 7, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/7.jpg', type: 'standard' },
-  { id: 8, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/8.png', type: 'standard' },
-  { id: 9, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/9.jpg', type: 'standard' },
-  { id: 10, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/10.png', type: 'wide' },
-  { id: 11, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/11.jpg', type: 'standard' },
-  { id: 12, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/12.jpg', type: 'standard' },
-  { id: 13, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/13.jpg', type: 'standard' },
-  { id: 14, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/14.jpg', type: 'standard' },
+  { id: 1, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s.png', type: 'hero' },
+  { id: 2, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s.jpg', type: 'standard' },
+  { id: 3, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (1).png', type: 'standard' },
+  { id: 4, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (1).jpg', type: 'standard' },
+  { id: 5, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (2).jpg', type: 'standard' },
+  { id: 6, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (2).png', type: 'normal' },
+  { id: 7, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (3).png', type: 'standard' },
+  { id: 8, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (3).jpg', type: 'standard' },
+  { id: 9, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (4).png', type: 'standard' },
+  { id: 10, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (5).png', type: 'wide' },
+  { id: 11, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (6).png', type: 'standard' },
+  { id: 12, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (7).png', type: 'standard' },
+  { id: 13, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (8).png', type: 'standard' },
+  { id: 14, src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s (3).jpg', type: 'standard' },
 ];
 
 export default function ExecutiveGallery() {
@@ -70,7 +70,7 @@ export default function ExecutiveGallery() {
             </p>
           </div>
         </div>
-        
+
         {/* The Grid */}
         <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[150px] md:auto-rows-[180px] grid-flow-dense gap-2 md:gap-1.5 overflow-hidden">
           {galleryData.map((item, idx) => (
