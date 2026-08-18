@@ -20,36 +20,36 @@ interface NewsItem {
   tag: string;
 }
 
-const newsItems: NewsItem[] = [
+const newsItems = [
   {
     id: "01",
-    category: "Company Update",
-    title: "New Branch Locations Strengthen Regional Presence",
-    desc: "Grupo Financiero Atlántida continues to expand its physical presence with new locations in La Ceiba and Quimistán, supporting broader access to its financial services.",
+    category: "Infrastructure",
+    title: "Building the Infrastructure Behind Modern Operations",
+    desc: "Modern organizations require more than individual tools. They require dependable digital infrastructure that connects people, processes, information, and decision-making into a coherent operating environment.",
     image:
-      "https://www.bancatlan.hn/sala-de-prensa/img/2026-01-09-plaza-teknos-quimistan/portada.jpg",
-    date: "JAN 09, 2026",
-    tag: "Expansion",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf1",
+    date: "AUG 18, 2026",
+    tag: "Infrastructure",
   },
   {
     id: "02",
-    category: "International",
-    title: "Grupo Financiero Atlántida Expands Its Presence in Spain",
-    desc: "At the VIII CEAPI Congress, Guillermo Bueso highlighted the group's international development and its entry into the Spanish banking market through EBN Banco.",
+    category: "M&A",
+    title: "Growth Through Strategic Alignment",
+    desc: "Sustainable growth is built through deliberate alignment. Our approach to partnerships, investments, and strategic opportunities focuses on creating stronger capabilities and long-term value.",
     image:
-      "https://cdn.prod.website-files.com/68363d5a1fb3537423263bff/6841f518e2c7e3dea8ea93a4_ceapi-2024-portada.jpg",
-    date: "JUN 04, 2025",
-    tag: "International",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf2",
+    date: "AUG 18, 2026",
+    tag: "M&A",
   },
   {
     id: "03",
-    category: "Brand & Innovation",
-    title: "AFP CONFIA Introduces a Refreshed Brand Identity",
-    desc: "AFP CONFIA has introduced an updated visual identity that reflects its continued focus on innovation, service quality, and long-term strength.",
+    category: "Press Room",
+    title: "Company Updates & Announcements",
+    desc: "A central place for company news, developments, announcements, and other updates that provide a clearer view of our work, direction, and ongoing initiatives.",
     image:
-      "https://cdn.prod.website-files.com/68363d5a1fb3537423263bff/683fcb25cfb6588ffd8a90be_Toma%20ae%CC%81rea%20AFP%20Confia%20-%20El%20Salvador-p-1080.jpg",
-    date: "JUN 04, 2025",
-    tag: "Brand",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf3",
+    date: "AUG 18, 2026",
+    tag: "Press Room",
   },
 ];
 
