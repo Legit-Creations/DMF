@@ -73,7 +73,7 @@ export default function Footer() {
               {/* Social Links */}
               <div className="mt-10 flex items-center gap-3">
                 <SocialLink
-                  href="https://www.youtube.com/legitcreations_"
+                  href="https://youtube.com/@legitcreations_yt"
                   label="YouTube"
                   icon={<Youtube size={18} strokeWidth={1.7} />}
                 />
