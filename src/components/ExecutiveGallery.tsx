@@ -16,74 +16,60 @@ import {
 interface GalleryItem {
   id: number;
   src: string;
-  type?: 'hero' | 'normal' | 'wide' | 'standard';
 }
 
 const galleryData: GalleryItem[] = [
   {
     id: 1,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s.png',
-    type: 'hero',
   },
   {
     id: 2,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s.jpg',
-    type: 'standard',
   },
   {
     id: 3,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%281%29.png',
-    type: 'standard',
   },
   {
     id: 4,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%281%29.jpg',
-    type: 'standard',
   },
   {
     id: 5,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%282%29.jpg',
-    type: 'standard',
   },
   {
     id: 6,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%282%29.png',
-    type: 'normal',
   },
   {
     id: 7,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%283%29.png',
-    type: 'standard',
   },
   {
     id: 8,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%283%29.jpg',
-    type: 'standard',
   },
   {
     id: 9,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%284%29.png',
-    type: 'standard',
   },
   {
     id: 10,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%285%29.png',
-    type: 'wide',
   },
   {
     id: 11,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%286%29.png',
-    type: 'standard',
   },
   {
     id: 12,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%287%29.png',
-    type: 'standard',
   },
   {
     id: 13,
     src: 'https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/frame-0.00s%20%288%29.png',
-    type: 'standard',
   },
 ];
 
@@ -141,23 +127,10 @@ export default function ExecutiveGallery() {
     };
   }, [ selectedIndex ]);
 
-  const getSpan = (type?: GalleryItem[ 'type' ]) => {
-    switch (type) {
-      case 'hero':
-        return 'col-span-2 md:col-span-3 row-span-2 md:row-span-3';
-      case 'normal':
-        return 'col-span-2 md:col-span-2 row-span-2';
-      case 'wide':
-        return 'col-span-2 md:col-span-3 row-span-1 md:row-span-2';
-      default:
-        return 'col-span-1 row-span-1';
-    }
-  };
-
   return (
     <>
       <section id="dmfgallery" className="w-full bg-bone text-obsidian">
-        <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10 md:py-36 lg:px-12">
+        <div className="mx-auto w-full max-w-5xl px-6 py-24 md:px-10 md:py-36">
           {/* HEADER */}
           <header className="max-w-4xl">
             <div className="mb-10 flex items-center gap-4">
@@ -192,106 +165,47 @@ export default function ExecutiveGallery() {
             </div>
           </header>
 
-          {/* GALLERY GRID */}
-          <div
-            className="
-              mt-16
-              grid
-              grid-cols-2
-              auto-rows-[180px]
-              grid-flow-dense
-              gap-3
-              sm:auto-rows-[210px]
-              md:mt-24
-              md:grid-cols-6
-              md:auto-rows-[200px]
-              md:gap-4
-            "
-          >
+          {/* VERTICAL STACK GALLERY FEED */}
+          <div className="mt-16 flex flex-col gap-8 md:mt-24 md:gap-12">
             {galleryData.map((item, index) => (
               <MotionDiv
                 key={item.id}
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{
-                  duration: 0.5,
-                  delay: Math.min(index * 0.035, 0.25),
+                  duration: 0.6,
+                  delay: Math.min(index * 0.04, 0.2),
                 }}
-                className={`
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-xl
-                  border
-                  border-obsidian/10
-                  bg-white/40
-                  p-3
-                  backdrop-blur-sm
-                  transition-all
-                  duration-500
-                  hover:border-obsidian/30
-                  hover:bg-white/80
-                  hover:shadow-lg
-                  ${getSpan(item.type)}
-                `}
+                className="group relative overflow-hidden rounded-2xl border border-obsidian/10 bg-white/50 p-4 backdrop-blur-sm transition-all duration-500 hover:border-obsidian/30 hover:bg-white hover:shadow-xl sm:p-8"
               >
+                {/* Clickable Overlay to Open Lightbox */}
                 <button
                   type="button"
                   onClick={() => openImage(index)}
                   aria-label={`Open gallery image ${item.id}`}
-                  className="
-                    absolute
-                    inset-0
-                    z-10
-                    h-full
-                    w-full
-                    cursor-zoom-in
-                    focus:outline-none
-                    focus-visible:ring-2
-                    focus-visible:ring-obsidian
-                    focus-visible:ring-offset-2
-                    focus-visible:ring-offset-bone
-                  "
+                  className="absolute inset-0 z-10 h-full w-full cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-obsidian"
                 />
 
-                <NextImage
-                  src={item.src}
-                  alt={`Julio Ponder Seneres — gallery image ${item.id}`}
-                  fill
-                  priority={index < 2}
-                  sizes="
-                    (max-width: 640px) 50vw,
-                    (max-width: 768px) 50vw,
-                    (max-width: 1200px) 33vw,
-                    16vw
-                  "
-                  className="
-                    object-contain
-                    p-2
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:scale-105
-                  "
-                />
+                {/* Image Container */}
+                <div className="relative h-[450px] w-full sm:h-[550px] md:h-[650px]">
+                  <NextImage
+                    src={item.src}
+                    alt={`Julio Ponder Seneres — gallery image ${item.id}`}
+                    fill
+                    priority={index < 2}
+                    sizes="(max-width: 1200px) 100vw, 1000px"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
+                </div>
 
-                {/* Minimal archive number */}
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    bottom-3
-                    left-3
-                    z-20
-                    opacity-60
-                    transition-opacity
-                    duration-300
-                    group-hover:opacity-100
-                  "
-                >
-                  <span className="font-mono text-[9px] tracking-[0.25em] text-obsidian/70">
-                    {String(item.id).padStart(2, '0')}
+                {/* Footer Meta inside Card */}
+                <div className="mt-4 flex items-center justify-between border-t border-obsidian/10 pt-4">
+                  <span className="font-mono text-[10px] tracking-[0.25em] text-ash">
+                    ARCHIVE // {String(item.id).padStart(2, '0')}
+                  </span>
+                  <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-ash group-hover:text-obsidian transition-colors">
+                    Click to Expand &rarr;
                   </span>
                 </div>
               </MotionDiv>
@@ -299,7 +213,7 @@ export default function ExecutiveGallery() {
           </div>
 
           {/* FOOTNOTE */}
-          <div className="mt-12 flex items-center justify-between border-t border-obsidian/10 pt-5">
+          <div className="mt-16 flex items-center justify-between border-t border-obsidian/10 pt-6">
             <p className="text-[8px] uppercase tracking-[0.35em] text-ash">
               Visual Archive
             </p>
@@ -316,19 +230,7 @@ export default function ExecutiveGallery() {
           role="dialog"
           aria-modal="true"
           aria-label="Gallery image viewer"
-          className="
-            fixed
-            inset-0
-            z-[100]
-            flex
-            flex-col
-            items-center
-            justify-between
-            bg-obsidian/95
-            p-4
-            backdrop-blur-md
-            sm:p-8
-          "
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-between bg-obsidian/95 p-4 backdrop-blur-md sm:p-8"
           onClick={closeImage}
         >
           {/* Top Bar / Close */}
@@ -342,21 +244,7 @@ export default function ExecutiveGallery() {
               type="button"
               onClick={closeImage}
               aria-label="Close image viewer"
-              className="
-                flex
-                h-10
-                w-10
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/15
-                text-white/70
-                transition-colors
-                hover:border-white/40
-                hover:text-white
-                focus:outline-none
-              "
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-white/40 hover:text-white focus:outline-none"
             >
               <X className="h-4 w-4" />
             </button>
@@ -375,27 +263,7 @@ export default function ExecutiveGallery() {
                 showPrevious();
               }}
               aria-label="Previous image"
-              className="
-                absolute
-                left-2
-                z-20
-                flex
-                h-11
-                w-11
-                -translate-y-1/2
-                top-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/10
-                bg-obsidian/40
-                text-white/70
-                transition-colors
-                hover:border-white/30
-                hover:text-white
-                sm:-left-12
-              "
+              className="absolute left-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-obsidian/40 text-white/70 transition-colors hover:border-white/30 hover:text-white sm:-left-12"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -408,27 +276,7 @@ export default function ExecutiveGallery() {
                 showNext();
               }}
               aria-label="Next image"
-              className="
-                absolute
-                right-2
-                z-20
-                flex
-                h-11
-                w-11
-                -translate-y-1/2
-                top-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/10
-                bg-obsidian/40
-                text-white/70
-                transition-colors
-                hover:border-white/30
-                hover:text-white
-                sm:-right-12
-              "
+              className="absolute right-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-obsidian/40 text-white/70 transition-colors hover:border-white/30 hover:text-white sm:-right-12"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -452,20 +300,10 @@ export default function ExecutiveGallery() {
               <button
                 key={item.id}
                 onClick={() => setSelectedIndex(idx)}
-                className={`
-                  relative
-                  h-14
-                  w-14
-                  flex-shrink-0
-                  overflow-hidden
-                  rounded-md
-                  border
-                  transition-all
-                  ${selectedIndex === idx
-                    ? 'border-white scale-105 opacity-100'
-                    : 'border-white/20 opacity-40 hover:opacity-80'
-                  }
-                `}
+                className={`relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-md border transition-all ${selectedIndex === idx
+                  ? 'border-white scale-105 opacity-100'
+                  : 'border-white/20 opacity-40 hover:opacity-80'
+                  }`}
               >
                 <NextImage
                   src={item.src}
