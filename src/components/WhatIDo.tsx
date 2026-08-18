@@ -207,7 +207,7 @@ const EcosystemContent = () => {
                   {/* NORMAL LINKS */}
                   {!item.isHighlight ? (
                     <Link
-                      href={item.link}
+                      href={item.link!} /* FIX APPLIED HERE: The exclamation mark satisfies TypeScript */
                       className="group/btn inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.35em] text-white transition-all duration-500 hover:text-gold md:text-[11px]"
                     >
                       {item.cta}
