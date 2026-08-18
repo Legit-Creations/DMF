@@ -1,170 +1,241 @@
 "use client";
-import {
-  motion
-} from 'framer-motion';
-import {
-  ArrowUpRight,
-  ShieldCheck,
-  Fingerprint
-} from 'lucide-react';
 
-export default function ExecutiveProfile() {
-  const positions = [{
+import { motion } from "framer-motion";
+import { ArrowUpRight, BriefcaseBusiness } from "lucide-react";
+
+const positions = [
+  {
     role: "Chief Administration Officer",
     url: "#",
     company: "Contra Atlantis Group",
-    tag: "Institutional Governance",
-    ref: "CAG-CAO-2026"
+    tag: "Administration & Operations",
+    description:
+      "Overseeing administrative operations, internal coordination, and the systems that support the group's day-to-day work.",
   },
-    {
-      role: "Chief Technology Officer",
-      url: "#",
-      company: "Contra Bobble Bank",
-      tag: "Digital Infrastructure",
-     ref : "CBB-CTO-2026"
-    },
-    {
-      role: "Founder & Creative Lead",
-      url: "https://legitcreations.com.ng",
-      company: "LEGIT CREATIONS LTD",
-      tag: "Technology & Consultant company",
-      ref : "RC-CAC-9721319"
-    }];
+  {
+    role: "Chief Technology Officer",
+    url: "#",
+    company: "Contra Bobble Bank",
+    tag: "Technology & Digital Infrastructure",
+    description:
+      "Leading technology direction, digital infrastructure, and the development of systems that support modern financial operations.",
+  },
+  {
+    role: "Founder & Creative Lead",
+    url: "https://legitcreations.com.ng",
+    company: "LEGIT CREATIONS LTD",
+    tag: "Technology & Creative Practice",
+    description:
+      "Building digital products, creative systems, and technology-led experiences through an independent technology and consulting company.",
+  },
+];
 
+export default function ExecutiveProfile() {
   return (
-    <section id="profile" className="relative py-24 md:py-40 bg-[#FBFBF9] text-obsidian overflow-hidden border-t border-gold/10">
-      {/* BACKGROUND DECOR: Blueprints */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] pointer-events-none">
-        <svg width="100%" height="100%" className="stroke-obsidian fill-none">
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" strokeWidth="0.5" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+    <section
+      id="profile"
+      className="relative overflow-hidden border-t border-obsidian/10 bg-[#FBFBF9] py-24 text-obsidian sm:py-32 lg:py-40"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* =========================================================
+            HEADER
+        ========================================================= */}
 
-        {/* HEADER: Institutional Identity */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 items-end">
-          <div className="lg:col-span-8">
-            <div className="flex items-center gap-3 mb-12">
-              <ShieldCheck className="text-gold w-4 h-4" />
-              <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">Official Executive Mandate</span>
+        <div className="grid gap-12 lg:grid-cols-[1fr_300px] lg:items-end">
+          <div>
+            <div className="mb-8 flex items-center gap-3">
+              <BriefcaseBusiness className="h-4 w-4 text-gold" />
+
+              <span className="text-[9px] font-medium uppercase tracking-[0.45em] text-ash">
+                Professional Profile
+              </span>
             </div>
-            <motion.h2
-              initial={ { opacity: 0, y: 30 }}
-              whileInView={ { opacity: 1, y: 0 }}
-              transition={ { duration: 0.8 }}
-              className="text-3xl md:text-6xl font-serif italic tracking-tighter mb-0"
-              >
-              Strategic <br /> <span className="not-italic font-black text-obsidian uppercase">Sovereignty</span>
-          </motion.h2>
-        </div>
 
-        <div className="lg:col-span-4 lg:text-right">
-          <div className="space-y-2">
-            <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="max-w-4xl font-display text-5xl leading-[0.92] tracking-[-0.04em] sm:text-6xl lg:text-8xl"
+            >
+              Work,
+              <br />
+              <span className="italic text-ash">
+                technology &amp; direction.
+              </span>
+            </motion.h2>
+          </div>
+
+          <div className="border-l border-obsidian/10 pl-6 lg:pb-2">
+            <p className="text-xs leading-6 text-ash">
+              A multidisciplinary professional profile spanning
+              administration, technology, entrepreneurship, and creative
+              practice.
+            </p>
+
+            <p className="mt-6 text-[9px] uppercase tracking-[0.35em] text-obsidian/40">
               Julio Ponder Seneres
             </p>
-            <div className="flex items-center lg:justify-end gap-3 text-gold/60 text-[11px] font-mono tracking-widest uppercase font-bold">
-              <Fingerprint size={14} /> Ref: JPS-CAG
+          </div>
+        </div>
+
+        {/* =========================================================
+            POSITIONS
+        ========================================================= */}
+
+        <div className="mt-20 border-t border-obsidian/15">
+          {positions.map((position, index) => (
+            <motion.a
+              key={position.role}
+              href={position.url}
+              target={position.url.startsWith("http") ? "_blank" : undefined}
+              rel={
+                position.url.startsWith("http")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.08,
+              }}
+              className="group grid gap-8 border-b border-obsidian/10 px-2 py-10 transition-colors duration-500 hover:bg-white sm:px-6 sm:py-12 lg:grid-cols-[90px_minmax(0,1fr)_260px] lg:items-center"
+            >
+              {/* Number */}
+
+              <span className="font-mono text-[9px] tracking-[0.3em] text-obsidian/30 transition-colors group-hover:text-gold">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              {/* Main */}
+
+              <div>
+                <p className="mb-3 text-[9px] uppercase tracking-[0.4em] text-gold">
+                  {position.tag}
+                </p>
+
+                <h3 className="font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
+                  {position.role}
+                </h3>
+
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-ash">
+                  {position.description}
+                </p>
+              </div>
+
+              {/* Company */}
+
+              <div className="flex items-center justify-between gap-5 border-t border-obsidian/10 pt-5 lg:border-t-0 lg:pt-0">
+                <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-obsidian/50 transition-colors group-hover:text-obsidian">
+                  {position.company}
+                </span>
+
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-obsidian/15 transition-all duration-300 group-hover:border-gold group-hover:bg-gold">
+                  <ArrowUpRight
+                    size={15}
+                    className="text-obsidian/50 transition-colors group-hover:text-white"
+                  />
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* =========================================================
+            PROFESSIONAL APPROACH
+        ========================================================= */}
+
+        <div className="mt-24 grid gap-12 border-t border-obsidian/10 pt-12 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-20">
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.45em] text-gold">
+              Approach
+            </p>
+          </div>
+
+          <div className="max-w-5xl">
+            <h3 className="max-w-4xl font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              Building better systems by bringing technology,
+              organisation, and creative thinking together.
+            </h3>
+
+            <div className="mt-10 grid gap-8 text-sm leading-8 text-ash sm:grid-cols-2 sm:text-base">
+              <p>
+                His work sits across several disciplines, but the underlying
+                approach remains consistent: understand how a system works,
+                identify where friction exists, and build practical ways to
+                make it better.
+              </p>
+
+              <p>
+                In administration, that means creating structure around
+                people, operations, and resources. In technology, it means
+                building reliable digital systems that can support real
+                organisations and the people who depend on them.
+              </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* THE POSITIONS LEDGER */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-        <div className="lg:col-span-8">
-          <div className="space-y-0 border-t border-obsidian/20">
-            {positions.map((pos, idx) => (
-              <motion.a
-                key={idx}
-                href={pos.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={ { opacity: 0, x: -20 }}
-                whileInView={ { opacity: 1, x: 0 }}
-                transition={ { delay: idx * 0.15, duration: 0.8 }}
-                className="group flex flex-col md:flex-row md:items-center justify-between py-12 border-b border-obsidian/10 hover:bg-white transition-all duration-500 px-6"
-                >
-                <div className="flex gap-8 items-start">
-                  <span className="text-gold font-mono text-xs pt-1 opacity-40 group-hover:opacity-100 transition-opacity">0{idx + 1}</span>
-                  <div>
-                    <span className="text-[11px] uppercase tracking-[0.4em] text-gold font-black block mb-3">
-                      {pos.tag}
-                    </span>
-                    <h3 className="text-2xl md:text-4xl font-display uppercase tracking-tight group-hover:text-gold transition-colors">
-                      {pos.role}
-                    </h3>
-                    <p className="flex items-center gap-3 text-gold/60 text-xs font-mono tracking-widest uppercase font-bold group-hover:text-gold transition-colors mt-2">
-                      ID: {pos.ref}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-6 mt-6 md:mt-0">
-                  <span className="text-[13px] uppercase tracking-widest font-bold text-obsidian/40 group-hover:text-obsidian transition-colors">
-                    {pos.company}
-                  </span>
-                  <div className="w-10 h-10 border border-gold/30 rounded-full flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all">
-                    <ArrowUpRight size={18} className="text-gold group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
+        {/* =========================================================
+            PERSONAL STATEMENT
+        ========================================================= */}
 
-          {/* NARRATIVE SECTION */}
-          <div className="mt-16 space-y-8">
-            <h4 className="text-gold font-bold tracking-[0.6em] text-[10px] uppercase">Strategic Intent</h4>
-            <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">
-              Architecting the permanent system that bridges the gap between cloud-native governance and Spanish Modernist aesthetics.
+        <div className="mt-24 grid gap-12 border-t border-obsidian/10 pt-12 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-20">
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.45em] text-gold">
+              Perspective
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-ash text-lg font-light leading-relaxed text-justify">
+            <p className="mt-3 text-[9px] uppercase tracking-[0.3em] text-obsidian/35">
+              From his words
+            </p>
+          </div>
+
+          <div className="max-w-4xl">
+            <blockquote className="font-display text-2xl leading-relaxed text-obsidian sm:text-3xl lg:text-4xl">
+              “Technology should make an organisation clearer, more capable,
+              and easier to operate — not simply more complicated.”
+            </blockquote>
+
+            <div className="mt-10 space-y-6 text-sm leading-8 text-ash sm:text-base">
               <p>
-                As a dual-mandate executive within the CAG ecosystem, Julio Ponder Seneres maintains a singular focus: the absolute elimination of operational friction. Through high-precision Digital Integration and administrative rigor, he secures the velocity of wealth across regional borders, aligning every milestone with a Strategic Growth Network built for long-term sustainability.
+                The goal is not to adopt technology for its own sake. It is to
+                understand where technology can improve the way people work,
+                how information moves, and how decisions are made.
               </p>
+
               <p>
-                This philosophy extends into his curation of the physical realm. Here, he employs architectural essentialism to curate minimalist environments that reflect the structural integrity and high-end privacy of a well-governed financial system.
+                That same principle extends to creative work and physical
+                environments. Good design removes unnecessary complexity and
+                gives the important things room to speak for themselves.
+              </p>
+
+              <p>
+                The long-term objective is simple: build organisations,
+                products, and environments that are useful today and still
+                make sense years from now.
               </p>
             </div>
           </div>
         </div>
 
-        {/* SIDEBAR: EXECUTIVE MANIFESTO */}
-        <div className="lg:col-span-4 flex flex-col mt-12 lg:mt-0">
-          <div className="relative pt-8 border-t border-obsidian/20 lg:border-t-0 lg:pt-0">
-            {/* Identification */}
-            <div className="mb-12">
-              <h4 className="text-gold uppercase tracking-[0.4em] text-[10px] font-black mb-2">Entrepreneurship Manifesto</h4>
-              <p className="text-[10px] font-mono text-ash/60 uppercase tracking-widest">
-                from his words
-              </p>
-            </div>
-            <div className="space-y-8 text-lg leading-relaxed text-ash antialiased text-justify font-light">
-              <p>
-                The modernization of a century-old financial legacy does not occur through the mere adoption of software; it is a structural reimagining of how authority is exercised in a digital landscape. At the group level, my focus remains on the convergence of institutional trust and systemic velocity. We are building a sovereign framework that treats digital infrastructure not as a utility, but as a strategic asset—one that must be as resilient as the capital it protects.
-              </p>
+        {/* =========================================================
+            FOOTER NOTE
+        ========================================================= */}
 
-              <p>
-                In the Central American corridor, where cross-border complexity often introduces operational friction, we have shifted the paradigm toward absolute integration. By enforcing a single standard of digital governance across our regional footprint, we eliminate the traditional vulnerabilities of legacy banking. This is the "Sovereign Tier"—a state of structural consistency where every transaction and administrative action is executed with mathematical precision.
-              </p>
+        <div className="mt-20 flex flex-col gap-4 border-t border-obsidian/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[9px] uppercase tracking-[0.3em] text-obsidian/35">
+            Administration · Technology · Entrepreneurship · Design
+          </p>
 
-              <p>
-                This rigor is mirrored in my pursuit of architectural essentialism. Whether I am architecting a banking core or a physical environment through GUSSJIT, the objective is the same: the removal of the superfluous to expose the permanence of the form. We are moving away from the ephemeral trends of the industry, focusing instead on the creation of high-precision environments—both digital and physical—that reflect the structural integrity required of a global financial leader.
-              </p>
-
-              <p>
-                The future of wealth acceleration depends on this synthesis of governance and aesthetics. It is about creating systems that do not just function, but endure.
-              </p>
-            </div>
-          </div>
+          <p className="text-[9px] uppercase tracking-[0.3em] text-obsidian/35">
+            Julio Ponder Seneres
+          </p>
         </div>
-
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }
