@@ -27,7 +27,7 @@ const newsItems = [
     title: "Building the Infrastructure Behind Modern Operations",
     desc: "Modern organizations require more than individual tools. They require dependable digital infrastructure that connects people, processes, information, and decision-making into a coherent operating environment.",
     image:
-      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf1",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf1.jpeg",
     date: "AUG 18, 2026",
     tag: "Infrastructure",
   },
@@ -37,7 +37,7 @@ const newsItems = [
     title: "Growth Through Strategic Alignment",
     desc: "Sustainable growth is built through deliberate alignment. Our approach to partnerships, investments, and strategic opportunities focuses on creating stronger capabilities and long-term value.",
     image:
-      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf2",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf2.jpeg",
     date: "AUG 18, 2026",
     tag: "M&A",
   },
@@ -47,7 +47,7 @@ const newsItems = [
     title: "Company Updates & Announcements",
     desc: "A central place for company news, developments, announcements, and other updates that provide a clearer view of our work, direction, and ongoing initiatives.",
     image:
-      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf3",
+      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf3.jpeg",
     date: "AUG 18, 2026",
     tag: "Press Room",
   },
