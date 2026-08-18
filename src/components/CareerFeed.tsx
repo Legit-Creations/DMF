@@ -124,7 +124,7 @@ export default function CompanyUpdates() {
           {/* NEWS GRID */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
             {newsItems.map((item, index) => (
-              <motion.article
+              <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -148,71 +148,8 @@ export default function CompanyUpdates() {
                 }}
                 className="group flex h-full cursor-pointer flex-col border border-obsidian/10 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:shadow-xl hover:shadow-obsidian/5 focus:outline-none focus:ring-1 focus:ring-gold"
               >
-
-                {/* IMAGE */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-obsidian">
-                  <NextImage
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  />
-
-                  {/* Simple category label — no image overlay */}
-                  <div className="absolute left-5 top-5">
-                    <span className="border border-white/30 bg-obsidian/75 px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.25em] text-white backdrop-blur-sm">
-                      {item.tag}
-                    </span>
-                  </div>
-                </div>
-
-                {/* CONTENT */}
-                <div className="flex flex-1 flex-col p-7 md:p-8">
-
-                  {/* META */}
-                  <div className="mb-6 flex items-center justify-between gap-4">
-                    <span className="font-mono text-[10px] tracking-[0.2em] text-gold">
-                      {item.id}
-                    </span>
-
-                    <div className="flex items-center gap-2 text-[9px] font-medium uppercase tracking-[0.16em] text-obsidian/40">
-                      <Clock className="h-3 w-3" />
-                      {item.date}
-                    </div>
-                  </div>
-
-                  {/* CATEGORY */}
-                  <p className="mb-3 text-[9px] font-bold uppercase tracking-[0.3em] text-gold">
-                    {item.category}
-                  </p>
-
-                  {/* TITLE */}
-                  <h3 className="text-xl font-semibold leading-[1.2] tracking-tight md:text-2xl">
-                    {item.title}
-                  </h3>
-
-                  {/* DESCRIPTION */}
-                  <p className="mt-5 line-clamp-4 text-sm font-light leading-7 text-ash">
-                    {item.desc}
-                  </p>
-
-                  {/* ACTION */}
-                  <div className="mt-auto pt-8">
-                    <div className="border-t border-obsidian/10 pt-5">
-                      <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.28em]">
-                        <span>
-                          Open Article
-                        </span>
-
-                        <span className="flex h-9 w-9 items-center justify-center border border-obsidian/15 transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-white">
-                          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>
+                {/* CARD CONTENT */}
+              </motion.div>
             ))}
           </div>
 
