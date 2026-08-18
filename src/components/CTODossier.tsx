@@ -136,9 +136,6 @@ export default function CTODossier() {
         <p className="text-[8px] uppercase tracking-[0.4em] text-neutral-600">
           Authorization
         </p>
-        <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400">
-          DMF-71-EXEC
-        </p>
       </div>
     </div>
 

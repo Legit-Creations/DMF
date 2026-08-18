@@ -1,14 +1,18 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+
+const BASE_URL = "https://jponders.legitcreations.com.ng";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://jponders.legitcreations.com.ng';
-
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/admin/'], 
+      userAgent: "*",
+      allow: "/",
+      disallow: [
+        "/api/",
+        "/admin/",
+      ],
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
-  }
+
+    sitemap: `${BASE_URL}/sitemap.xml`,
+  };
 }
