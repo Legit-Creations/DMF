@@ -13,7 +13,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-label="Hero Section"
-      className="relative w-full overflow-hidden bg-cream-50"
+      className="relative w-full overflow-hidden bg-stone-50"
       style={{
         marginTop: "var(--header-height, 0px)",
         minHeight: "calc(100vh - var(--header-height, 0px))",
@@ -29,7 +29,8 @@ export default function Hero() {
           priority
           placeholder="blur"
           blurDataURL={placeholderUrl}
-          className="object-cover opacity-80 mix-blend-multiply"
+          // Changed: Removed mix-blend-multiply and lowered opacity for a cleaner, brighter look
+          className="object-cover opacity-30"
         />
       </div>
 
@@ -41,7 +42,8 @@ export default function Hero() {
           <div className="w-full">
             <RevealLine>
               <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/40 backdrop-blur-md border border-white/60 rounded-xl shadow-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-gold-500 shadow-[0_0_8px_rgba(212,175,55,0.6)]" />
+                {/* Changed: Replaced faint gold shadow with a solid, high-contrast dark stone dot */}
+                <span className="w-2 h-2 rounded-full bg-stone-900" />
                 <span className="text-[10px] uppercase tracking-[0.35em] text-stone-900 font-bold">
                   Institutional Mandate
                 </span>
@@ -76,9 +78,10 @@ export default function Hero() {
           {/* 3. BOTTOM ZONE: Visual Badge/Button Element */}
           <div className="w-full pt-6">
             <RevealLine>
-              <div className="inline-block px-8 py-4 bg-stone-900 border border-gold-500/50 text-white text-[11px] font-bold tracking-[0.25em] uppercase rounded-sm shadow-md select-none">
+              {/* Changed: Removed the border, adjusted padding, added a hover effect */}
+              <button className="inline-block px-10 py-4 bg-stone-900 text-white text-[11px] font-bold tracking-[0.25em] uppercase rounded-sm shadow-xl transition-colors hover:bg-stone-800 select-none cursor-pointer">
                 View the Portfolio
-              </div>
+              </button>
             </RevealLine>
           </div>
 
