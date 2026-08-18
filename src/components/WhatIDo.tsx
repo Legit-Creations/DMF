@@ -9,11 +9,11 @@ import {
   Globe,
   ArrowUpRight,
   Building2,
-  X,
 } from "lucide-react";
 import NextImage from "next/image";
 import Link from "next/link";
 
+// Dynamically import motion components
 const MotionDiv = dynamic(
   () => import("framer-motion").then((mod) => mod.motion.div),
   { ssr: true }
@@ -30,47 +30,47 @@ const specializations = [
     desc: "In his role as Chief Administrative Officer to the Board at CONTRA ATLANTIS GROUP, Julio Ponder Seneres contributes to corporate governance, operational coordination, and strategic development across the group's holding-company structure.",
     icon: <ShieldCheck className="w-5 h-5" />,
     role: "Chief Administrative Officer",
-    category: "Corporate Leadership",
-    tag: "CAG",
+    metric: "Corporate Leadership",
     link: "/dossier/strategic-growth",
     cta: "View Profile",
+    tag: "CAG",
   },
   {
     title: "Digital Transformation",
     desc: "As Chief Technology Officer of CONTRA BOBBLE BANK hn, Julio Ponder Seneres works across digital banking infrastructure, technology strategy, and the development of modern financial technology ecosystems.",
     icon: <Cpu className="w-5 h-5" />,
     role: "Chief Technology Officer",
-    category: "Technology",
-    tag: "Contra Bobble Bank",
+    metric: "Technology",
     link: "/dossier/digital-integration",
     cta: "View Profile",
+    tag: "Contra Bobble Bank",
   },
   {
     title: "Technology & Design",
     desc: "LEGIT CREATIONS LTD is a multidisciplinary enterprise providing integrated information and digital solutions across Technology, Commerce, and Finance.",
     icon: <Palette className="w-5 h-5" />,
     role: "Founder & Principal Architect",
-    category: "Technology",
-    tag: "LEGIT CREATIONS",
+    metric: "Technology",
     link: "https://www.legitcreations.com.ng",
     cta: "Explore Legit Creations",
     texture:
       "https://images.unsplash.com/photo-1504198266287-1659872e6590?auto=format&fit=crop&q=80",
+    tag: "LEGIT CREATIONS",
   },
   {
     title: "Investment & Growth",
     desc: "Strategic participation in investment and growth opportunities, with an emphasis on long-term value creation, responsible capital allocation, and sustainable development.",
     icon: <Globe className="w-5 h-5" />,
     role: "Asset Advisory",
-    category: "Finance",
-    tag: "Investment",
+    metric: "Finance",
     cta: "Learn More",
     isHighlight: true,
+    tag: "Investment",
   },
 ];
 
 const EcosystemContent = () => {
-  const [ isInvestmentOpen, setIsInvestmentOpen ] = useState(false);
+  const [ showInvestmentNotice, setShowInvestmentNotice ] = useState(false);
 
   return (
     <>
@@ -114,7 +114,8 @@ const EcosystemContent = () => {
               <p className="max-w-xl text-left text-base font-light leading-relaxed text-white/70 md:text-lg">
                 Julio Ponder Seneres works across leadership, technology,
                 commerce, and finance, with a focus on building and supporting
-                organizations, digital systems, and long-term growth initiatives.
+                organizations, digital systems, and long-term growth
+                initiatives.
               </p>
             </MotionDiv>
 
@@ -170,7 +171,7 @@ const EcosystemContent = () => {
 
                     <div className="text-right">
                       <span className="block text-[9px] font-bold uppercase tracking-[0.35em] text-gold">
-                        {item.category}
+                        {item.metric}
                       </span>
 
                       <span className="mt-1 block text-[9px] uppercase tracking-[0.2em] text-white/40">
@@ -203,20 +204,8 @@ const EcosystemContent = () => {
                     </span>
                   </div>
 
-                  {/* NORMAL LINK OR MODAL TRIGGER */}
-                  {item.title === "Investment & Growth" ? (
-                    <button
-                      type="button"
-                      onClick={() => setIsInvestmentOpen(true)}
-                      className="group/btn inline-flex items-center gap-4 bg-gold px-7 py-4 text-[10px] font-black uppercase tracking-[0.35em] text-obsidian transition-all duration-500 hover:bg-gold-light md:text-[11px]"
-                      aria-haspopup="dialog"
-                      aria-controls="investment-growth-dialog"
-                    >
-                      {item.cta}
-
-                      <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1" />
-                    </button>
-                  ) : (
+                  {/* NORMAL LINKS */}
+                  {!item.isHighlight ? (
                     <Link
                       href={item.link}
                       className="group/btn inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.35em] text-white transition-all duration-500 hover:text-gold md:text-[11px]"
@@ -225,6 +214,17 @@ const EcosystemContent = () => {
 
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1" />
                     </Link>
+                  ) : (
+                    /* INVESTMENT & GROWTH POPUP BUTTON */
+                    <button
+                      type="button"
+                      onClick={() => setShowInvestmentNotice(true)}
+                      className="group/btn inline-flex items-center gap-4 bg-gold px-7 py-4 text-[10px] font-black uppercase tracking-[0.35em] text-obsidian shadow-2xl shadow-gold/10 transition-all duration-500 hover:bg-gold-light hover:shadow-gold/30 md:text-[11px]"
+                    >
+                      {item.cta}
+
+                      <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1" />
+                    </button>
                   )}
                 </div>
               </MotionDiv>
@@ -249,71 +249,70 @@ const EcosystemContent = () => {
               </p>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* INVESTMENT & GROWTH MODAL */}
-      {isInvestmentOpen && (
+      {/* INVESTMENT & GROWTH POPUP */}
+      {showInvestmentNotice && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="investment-growth-title"
-          id="investment-growth-dialog"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) {
-              setIsInvestmentOpen(false);
-            }
-          }}
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm"
+          onClick={() => setShowInvestmentNotice(false)}
+          role="presentation"
         >
-          <div className="relative w-full max-w-lg border border-white/10 bg-obsidian p-8 shadow-2xl md:p-12">
+          <div
+            className="relative w-full max-w-md border border-white/10 bg-obsidian p-8 shadow-2xl md:p-10"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="investment-growth-title"
+            onClick={(event) => event.stopPropagation()}
+          >
 
             {/* CLOSE */}
             <button
               type="button"
-              onClick={() => setIsInvestmentOpen(false)}
-              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center border border-white/10 text-white/50 transition-colors hover:border-gold/50 hover:text-gold"
-              aria-label="Close"
+              onClick={() => setShowInvestmentNotice(false)}
+              className="absolute right-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 transition-colors hover:text-gold"
+              aria-label="Close investment and growth notice"
             >
-              <X className="h-4 w-4" />
+              Close
             </button>
 
             {/* LABEL */}
-            <span className="mb-5 block text-[9px] font-bold uppercase tracking-[0.35em] text-gold">
+            <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.35em] text-gold">
               Investment & Growth
             </span>
 
             {/* TITLE */}
             <h2
               id="investment-growth-title"
-              className="mb-6 text-3xl font-serif italic tracking-tight text-white md:text-4xl"
+              className="mb-5 pr-12 text-2xl font-serif italic tracking-tight text-white md:text-3xl"
             >
               This area is currently being developed.
             </h2>
 
-            {/* DESCRIPTION */}
-            <p className="max-w-md text-sm font-light leading-relaxed text-white/60 md:text-base">
+            {/* MESSAGE */}
+            <p className="text-sm font-light leading-relaxed text-white/60 md:text-base">
               Information relating to investment interests, strategic growth
-              initiatives, and selected opportunities will be published here
-              as this area develops.
+              initiatives, and selected opportunities will be made available
+              here in a future update.
             </p>
 
             {/* DIVIDER */}
             <div className="my-8 h-px w-full bg-white/10" />
 
-            {/* STATUS */}
-            <p className="text-[9px] uppercase tracking-[0.3em] text-white/40">
-              Further information will be made available in a future update.
+            {/* SMALL NOTE */}
+            <p className="text-[9px] uppercase tracking-[0.25em] text-white/35">
+              Further information will be published as this area develops.
             </p>
 
-            {/* CLOSE ACTION */}
+            {/* ACTION */}
             <button
               type="button"
-              onClick={() => setIsInvestmentOpen(false)}
-              className="mt-8 text-[10px] font-black uppercase tracking-[0.35em] text-white transition-colors hover:text-gold"
+              onClick={() => setShowInvestmentNotice(false)}
+              className="mt-8 inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-colors hover:text-gold"
             >
-              Close
+              Continue
+              <ArrowUpRight className="h-3.5 w-3.5" />
             </button>
           </div>
         </div>
