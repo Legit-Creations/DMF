@@ -12,33 +12,14 @@ const inquiryTypes = [
 ];
 
 export default function ExecutiveContact() {
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "success" | "error"
-  >("idle");
+  const [submitted, setSubmitted] = useState(false);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    setStatus("sending");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error("Submission failed");
-      }
-
-      form.reset();
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
+    // Temporary frontend-only submission.
+    // No API, Resend, Formspree, or network request is made.
+    setSubmitted(true);
   }
 
   return (
@@ -101,7 +82,7 @@ export default function ExecutiveContact() {
 
           {/* Form */}
           <div>
-            {status === "success" ? (
+            {submitted ? (
               <div className="border border-black/10 bg-white p-8 sm:p-12">
                 <CheckCircle2
                   size={28}
@@ -114,13 +95,14 @@ export default function ExecutiveContact() {
                 </h2>
 
                 <p className="mt-4 max-w-md text-sm leading-7 text-black/55">
-                  Thank you for reaching out. Your message has been submitted
-                  successfully.
+                  Thank you for reaching out. Your message has been received.
+                  We appreciate you taking the time to contact Contra Atlantis
+                  Group.
                 </p>
 
                 <button
                   type="button"
-                  onClick={() => setStatus("idle")}
+                  onClick={() => setSubmitted(false)}
                   className="mt-8 inline-flex items-center gap-2 border-b border-black pb-2 text-[10px] font-medium uppercase tracking-[0.3em] transition-opacity hover:opacity-50"
                 >
                   Send another message
@@ -238,14 +220,6 @@ export default function ExecutiveContact() {
                   />
                 </div>
 
-                {/* Status */}
-                {status === "error" && (
-                  <p className="mt-5 text-xs text-red-600">
-                    We couldn&apos;t send your message. Please verify your
-                    details and try again.
-                  </p>
-                )}
-
                 {/* Submit */}
                 <div className="mt-8 flex flex-col gap-5 border-t border-black/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
                   <p className="max-w-xs text-[10px] leading-5 text-black/35">
@@ -255,17 +229,14 @@ export default function ExecutiveContact() {
 
                   <button
                     type="submit"
-                    disabled={status === "sending"}
-                    className="group inline-flex items-center justify-center gap-3 bg-[#111111] px-7 py-4 text-[10px] font-medium uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#B08A32] hover:text-black disabled:cursor-not-allowed disabled:opacity-50"
+                    className="group inline-flex items-center justify-center gap-3 bg-[#111111] px-7 py-4 text-[10px] font-medium uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#B08A32] hover:text-black"
                   >
-                    {status === "sending" ? "Sending..." : "Send Message"}
+                    Send Message
 
-                    {status !== "sending" && (
-                      <ArrowUpRight
-                        size={14}
-                        className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      />
-                    )}
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
                   </button>
                 </div>
               </form>
