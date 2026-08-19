@@ -4,87 +4,253 @@ import Image from "next/image";
 import { RevealContainer, RevealLine } from "@/components/motion/Reveal";
 
 export default function Hero() {
+  /*
+   * Hero image:
+   * 4896 × 3264 — 3:2 architectural / shadow photography.
+   *
+   * Keep the original high-resolution asset in your Blob storage.
+   * Next/Image will optimize the delivered size automatically.
+   */
   const imageSrc =
-    "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/smal%20screen%20background";
+    "YOUR-JPS-SHADOW-IMAGE-URL";
+
   const placeholderUrl =
     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmOGY5ZmEiLz48L3N2Zz4=";
 
   return (
     <section
       id="hero"
-      aria-label="Hero Section"
-      className="relative w-full overflow-hidden bg-stone-50"
+      aria-label="Julio Ponder Seneres — professional portfolio"
+      className="relative w-full min-h-[calc(100svh-var(--header-height,0px))] overflow-hidden bg-[#F8F7F3] text-obsidian"
       style={{
         marginTop: "var(--header-height, 0px)",
-        minHeight: "calc(100vh - var(--header-height, 0px))",
       }}
     >
-      {/* Background Layer */}
-      <div className="absolute inset-0 -z-10" aria-hidden="true">
+      {/* =========================================================
+          BACKGROUND IMAGE
+      ========================================================= */}
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+      >
         <Image
           src={imageSrc}
           alt=""
           fill
-          sizes="100vw"
           priority
+          sizes="100vw"
           placeholder="blur"
           blurDataURL={placeholderUrl}
-          // Changed: Removed mix-blend-multiply and lowered opacity for a cleaner, brighter look
-          className="object-cover opacity-30"
+          className="
+            object-cover
+            object-center
+            opacity-[0.38]
+            scale-[1.02]
+            transition-transform
+            duration-[2000ms]
+          "
+        />
+
+        {/* Soft tonal veil — keeps typography readable */}
+        <div className="absolute inset-0 bg-[#F8F7F3]/25" />
+
+        {/* Subtle bottom fade for transition into the next section */}
+        <div
+          className="
+            absolute inset-x-0 bottom-0 h-32
+            bg-gradient-to-t
+            from-[#F8F7F3]
+            to-transparent
+          "
         />
       </div>
 
-      {/* Main Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full min-h-[calc(100vh-var(--header-height,0px))] flex flex-col justify-between pt-12 pb-12 md:pt-16 md:pb-16">
-        <RevealContainer className="w-full h-full flex flex-col justify-between flex-1" staggerDelay={0.1}>
-
-          {/* 1. TOP ZONE: Glassmorphic Badge */}
-          <div className="w-full">
+      {/* =========================================================
+          MAIN CONTENT
+      ========================================================= */}
+      <div
+        className="
+          relative z-10
+          mx-auto flex w-full max-w-7xl
+          min-h-[calc(100svh-var(--header-height,0px))]
+          flex-col justify-between
+          px-6 py-10
+          sm:px-8 sm:py-12
+          md:px-12 md:py-16
+          lg:px-16
+        "
+      >
+        <RevealContainer
+          className="flex flex-1 flex-col justify-between"
+          staggerDelay={0.1}
+        >
+          {/* =====================================================
+              TOP — IDENTITY
+          ===================================================== */}
+          <div className="pt-2">
             <RevealLine>
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/40 backdrop-blur-md border border-white/60 rounded-xl shadow-sm">
-                {/* Changed: Replaced faint gold shadow with a solid, high-contrast dark stone dot */}
-                <span className="w-2 h-2 rounded-full bg-stone-900" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-stone-900 font-bold">
-                  Institutional Mandate
+              <div className="inline-flex items-center gap-3">
+                <span className="h-px w-8 bg-gold sm:w-10" />
+
+                <span
+                  className="
+                    text-[9px]
+                    font-medium
+                    uppercase
+                    tracking-[0.38em]
+                    text-obsidian/65
+                    sm:text-[10px]
+                    sm:tracking-[0.45em]
+                  "
+                >
+                  Professional Portfolio
                 </span>
               </div>
             </RevealLine>
           </div>
 
-          {/* 2. MIDDLE ZONE: Headline & Copy */}
-          <div className="flex-1 flex flex-col justify-center my-auto py-8 max-w-4xl">
-            <h1 className="font-serif font-light text-5xl md:text-8xl text-stone-900 leading-[1.05] mb-8 tracking-tighter">
-              <RevealLine>
-                Financial{" "}
-                <span className="font-sans font-extralight tracking-tight text-stone-700 italic">
-                  Infrastructure
-                </span>
-              </RevealLine>
-              <RevealLine className="mt-1">
-                for Modern Institutions
-              </RevealLine>
-            </h1>
+          {/* =====================================================
+              CENTER — HERO MESSAGE
+          ===================================================== */}
+          <div
+            className="
+              flex w-full flex-1
+              items-center
+              py-16
+              sm:py-20
+              md:py-24
+            "
+          >
+            <div className="max-w-5xl">
+              <h1
+                className="
+                  font-serif
+                  text-[3.25rem]
+                  font-light
+                  leading-[0.94]
+                  tracking-[-0.055em]
+                  text-obsidian
+                  sm:text-6xl
+                  md:text-7xl
+                  lg:text-[6.8rem]
+                  xl:text-[7.5rem]
+                "
+              >
+                <RevealLine>
+                  Technology,
+                </RevealLine>
 
-            <RevealLine as="p" className="max-w-2xl text-stone-800 md:text-lg leading-relaxed font-light text-left hyphens-auto">
-              The professional portfolio of{" "}
-              <strong className="font-semibold text-stone-950 border-b border-stone-950">
-                Julio P. Seneres
-              </strong>
-              . Architecting institutional-grade digital governance and fintech
-              solutions for the global stage.
-            </RevealLine>
+                <RevealLine className="mt-1">
+                  <span className="italic text-obsidian/65">
+                    Operations
+                  </span>
+                  {" & "}
+                </RevealLine>
+
+                <RevealLine className="mt-1">
+                  Digital Infrastructure
+                </RevealLine>
+              </h1>
+
+              <RevealLine
+                as="p"
+                className="
+                  mt-8
+                  max-w-2xl
+                  text-sm
+                  font-light
+                  leading-7
+                  text-obsidian/70
+                  sm:mt-10
+                  sm:text-base
+                  sm:leading-8
+                  md:text-lg
+                  md:leading-9
+                "
+              >
+                The professional portfolio of{" "}
+                <strong className="font-medium text-obsidian">
+                  Julio P. Seneres
+                </strong>
+                . Working across technology, administration, digital
+                infrastructure, and business systems to build more
+                capable organizations.
+              </RevealLine>
+            </div>
           </div>
 
-          {/* 3. BOTTOM ZONE: Visual Badge/Button Element */}
-          <div className="w-full pt-6">
+          {/* =====================================================
+              BOTTOM — NAVIGATION / CONTEXT
+          ===================================================== */}
+          <div className="flex w-full items-end justify-between gap-8">
             <RevealLine>
-              {/* Changed: Removed the border, adjusted padding, added a hover effect */}
-              <button className="inline-block px-10 py-4 bg-stone-900 text-white text-[11px] font-bold tracking-[0.25em] uppercase rounded-sm shadow-xl transition-colors hover:bg-stone-800 select-none cursor-pointer">
-                View the Portfolio
-              </button>
+              <a
+                href="#profile"
+                className="
+                  group
+                  inline-flex
+                  items-center
+                  gap-4
+                  bg-obsidian
+                  px-7
+                  py-3.5
+                  text-[10px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.28em]
+                  text-white
+                  transition-all
+                  duration-300
+                  hover:bg-gold
+                  hover:text-obsidian
+                  sm:px-9
+                  sm:py-4
+                "
+              >
+                <span>View Portfolio</span>
+
+                <span
+                  className="
+                    h-px
+                    w-5
+                    bg-white/50
+                    transition-all
+                    duration-300
+                    group-hover:w-8
+                    group-hover:bg-obsidian
+                  "
+                />
+              </a>
+            </RevealLine>
+
+            {/* Quiet contextual marker */}
+            <RevealLine>
+              <div className="hidden text-right sm:block">
+                <p
+                  className="
+                    text-[8px]
+                    uppercase
+                    tracking-[0.35em]
+                    text-obsidian/40
+                  "
+                >
+                  Technology · Administration
+                </p>
+
+                <p
+                  className="
+                    mt-2
+                    text-[8px]
+                    uppercase
+                    tracking-[0.35em]
+                    text-obsidian/30
+                  "
+                >
+                  Business Systems
+                </p>
+              </div>
             </RevealLine>
           </div>
-
         </RevealContainer>
       </div>
     </section>
