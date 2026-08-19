@@ -9,6 +9,7 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
     "./src/app/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
+    "./src/seo/**/*.{ts,tsx}",
     "./src/types/**/*.{ts,tsx}",
     "./src/data/**/*.{ts,tsx}",
   ],

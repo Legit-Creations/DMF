@@ -4,15 +4,7 @@ import Image from "next/image";
 import { RevealContainer, RevealLine } from "@/components/motion/Reveal";
 
 export default function Hero() {
-  /*
-   * Hero image:
-   * 4896 × 3264 — 3:2 architectural / shadow photography.
-   *
-   * Keep the original high-resolution asset in your Blob storage.
-   * Next/Image will optimize the delivered size automatically.
-   */
-  const imageSrc =
-    "YOUR-JPS-SHADOW-IMAGE-URL";
+  const imageSrc = "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/bf.jpeg";
 
   const placeholderUrl =
     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmOGY5ZmEiLz48L3N2Zz4=";
