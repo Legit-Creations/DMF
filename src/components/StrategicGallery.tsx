@@ -190,11 +190,11 @@ function GalleryContent() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl">
+              <h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-obsidian md:text-6xl">
                 People &amp;
                 <br />
                 <span className="font-bold uppercase">
-                  moments.
+                  moments
                 </span>
               </h2>
             </div>
