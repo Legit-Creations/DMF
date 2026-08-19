@@ -75,7 +75,7 @@ export default function CompanyUpdates() {
   return (
     <>
       <section
-        id="updates"
+        id="ledger"
         className="overflow-hidden bg-[#F6F6F3] px-6 py-24 text-obsidian md:py-36"
       >
         <div className="mx-auto max-w-7xl">

@@ -171,7 +171,7 @@ function GalleryContent() {
   return (
     <>
       <section
-        id="dmfgallery"
+        id="caggallery"
         className="w-full overflow-hidden border-t border-obsidian/10 bg-bone"
       >
         <div className="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40">
@@ -190,11 +190,11 @@ function GalleryContent() {
                 </span>
               </div>
 
-              <h2 className="max-w-4xl font-display text-5xl leading-[0.92] tracking-[-0.04em] text-obsidian sm:text-6xl lg:text-8xl">
-                People,
+              <h2 className="font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl">
+                People &amp;
                 <br />
-                <span className="italic text-ash">
-                  places &amp; moments.
+                <span className="font-bold uppercase">
+                  moments.
                 </span>
               </h2>
             </div>

@@ -117,9 +117,8 @@ export default function Hero() {
               <h1
                 className="
                   font-serif
-                  text-[3.25rem]
-                  font-light
-                  leading-[0.94]
+                  text-[3.25rem]               
+                  leading-[1.05]
                   tracking-[-0.055em]
                   text-obsidian
                   sm:text-6xl

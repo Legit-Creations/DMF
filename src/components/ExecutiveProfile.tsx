@@ -57,13 +57,12 @@ export default function ExecutiveProfile() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="max-w-4xl font-display text-5xl leading-[0.92] tracking-[-0.04em] sm:text-6xl lg:text-8xl"
+              className="font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl"
             >
-              Work,
+              Executive
               <br />
-              <span className="italic text-ash">
-                technology &amp; direction.
-              </span>
+              <span className="font-bold uppercase">
+                profile              </span>
             </motion.h2>
           </div>
 

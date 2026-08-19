@@ -150,7 +150,7 @@ export default function ExecutiveGallery() {
           GALLERY
       ========================================================== */}
       <section
-        id="dmfgallery"
+        id="jpsgallery"
         aria-labelledby="gallery-title"
         className="w-full overflow-hidden bg-bone text-obsidian"
       >
@@ -171,14 +171,16 @@ export default function ExecutiveGallery() {
               </span>
             </div>
 
-            <h1
+            <h2
               id="gallery-title"
-              className="font-display text-5xl leading-[0.95] tracking-[-0.035em] sm:text-6xl md:text-7xl"
+              className="font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl"
             >
               Julio Ponder
               <br />
-              Seneres
-            </h1>
+              <span className="font-bold uppercase">
+                Seneres
+              </span>
+            </h2>
 
             <p className="mt-5 text-[10px] font-medium uppercase tracking-[0.38em] text-ash">
               Chief Administrative Officer

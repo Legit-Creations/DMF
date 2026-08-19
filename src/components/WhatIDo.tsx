@@ -103,10 +103,11 @@ const EcosystemContent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-8 text-4xl font-serif italic leading-[1.05] tracking-tighter text-white md:text-6xl"
+                className="mb-8 font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl"
               >
-                Professional{" "}
-                <span className="not-italic font-bold uppercase text-gold">
+                Professional
+                <br />
+                <span className="font-bold uppercase text-gold">
                   Focus
                 </span>
               </MotionH2>
