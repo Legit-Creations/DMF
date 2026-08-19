@@ -26,8 +26,7 @@ const newsItems = [
     category: "Infrastructure",
     title: "Building the Infrastructure Behind Modern Operations",
     desc: "Modern organizations require more than individual tools. They require dependable digital infrastructure that connects people, processes, information, and decision-making into a coherent operating environment.",
-    image:
-      "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf1.jpeg",
+    image: "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps/cf1.jpeg",
     date: "AUG 18, 2026",
     tag: "Infrastructure",
   },
@@ -148,7 +147,41 @@ export default function CompanyUpdates() {
                 }}
                 className="group flex h-full cursor-pointer flex-col border border-obsidian/10 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:shadow-xl hover:shadow-obsidian/5 focus:outline-none focus:ring-1 focus:ring-gold"
               >
-                {/* CARD CONTENT */}
+                {/* IMAGE CONTAINER */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-obsidian/5">
+                  <NextImage
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* TEXT CONTENT */}
+                <div className="flex flex-1 flex-col p-6 md:p-8">
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">
+                      {item.category}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-obsidian/40">
+                      <Clock className="h-3 w-3" />
+                      {item.date}
+                    </span>
+                  </div>
+
+                  <h3 className="mb-3 font-serif text-xl leading-snug tracking-tight text-obsidian transition-colors group-hover:text-gold">
+                    {item.title}
+                  </h3>
+
+                  <p className="mb-6 line-clamp-2 text-xs font-light leading-relaxed text-ash">
+                    {item.desc}
+                  </p>
+
+                  <div className="mt-auto flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-obsidian group-hover:text-gold">
+                    <span>Read Preview</span>
+                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
