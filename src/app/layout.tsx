@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 
 const SITE_URL = "https://jponders.legitcreations.com.ng";
 
-const LOGO_URL =
+const OG_IMAGE_URL =
   "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.svg";
 
 const FAVICON_URL =
