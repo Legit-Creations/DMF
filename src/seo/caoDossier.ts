@@ -6,8 +6,8 @@ const CAO_DOSSIER_URL = `${SITE_URL}/dossier/strategic-growth`;
 
 const CAO_OG_IMAGE =
   "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/opengraph.png";
-
-export const metadata: Metadata = {
+ 
+export const caoMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: 'Strategic Growth | CAO Dossier - Julio Ponder Seneres',

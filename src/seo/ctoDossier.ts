@@ -10,7 +10,7 @@ const CTO_DOSSIER_URL =
 const CTO_OG_IMAGE =
   "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/opengraph.png";
 
-export const ctoDossierMetadata: Metadata = {
+export const ctoMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
