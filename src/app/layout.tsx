@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 const SITE_URL = "https://jponders.legitcreations.com.ng";
 
 const LOGO_URL =
-  "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.png";
+  "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/jps_logo.svg";
 
 const FAVICON_URL =
   "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/favicon.ico";
@@ -75,39 +75,30 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: SITE_URL,
-    siteName: "Contra Atlantis Group",
-
-    title:
-      "Contra Atlantis Group | Banking & Fintech Infrastructure",
-
-    description:
-      "Enterprise infrastructure for banking, payments and fintech, with administrative, operational and digital integration capabilities led by Julio Ponder Seneres.",
-
-    images: [
-      {
-        url: LOGO_URL,
-        width: 2000,
-        height: 2000,
-        alt: "Contra Atlantis Group",
-      },
-    ],
-  },
+  type: "website",
+  locale: "en_US",
+  url: SITE_URL,
+  siteName: "Contra Atlantis Group",
+  title: "Contra Atlantis Group | Banking & Fintech Infrastructure",
+  description:
+    "Enterprise infrastructure for banking, payments and fintech, with administrative, operational and digital integration capabilities led by Julio Ponder Seneres.",
+  images: [
+    {
+      url: OG_IMAGE_URL,
+      width: 1200,
+      height: 630,
+      alt: "Contra Atlantis Group",
+    },
+  ],
+},
 
   twitter: {
-    card: "summary_large_image",
-
-    title:
-      "Contra Atlantis Group | Banking & Fintech Infrastructure",
-
-    description:
-      "Enterprise banking, payments and digital infrastructure led by Julio Ponder Seneres.",
-
-    images: [LOGO_URL],
-  },
-
+  card: "summary_large_image",
+  title: "Contra Atlantis Group | Banking & Fintech Infrastructure",
+  description:
+    "Enterprise banking, payments and digital infrastructure led by Julio Ponder Seneres.",
+  images: [OG_IMAGE_URL],
+},
   icons: {
     icon: [
       {
