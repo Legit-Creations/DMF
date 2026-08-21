@@ -1,46 +1,46 @@
 import type { Metadata } from "next";
 
-const SITE_URL =
-  "https://jponders.legitcreations.com.ng";
+const SITE_URL = "https://jponders.legitcreations.com.ng";
 
-const CAO_DOSSIER_URL =
-  `${SITE_URL}/dossier/strategic-growth`;
+const CAO_DOSSIER_URL = `${SITE_URL}/dossier/strategic-growth`;
 
-// Replace this with the actual CAO photograph URL
-// from your Vercel Blob Storage.
 const CAO_OG_IMAGE =
-  "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx.jpg";
+  "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/opengraph.png";
 
-export const julioPonderMetadata: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  title:
-    "Julio Ponder Seneres — Chief Administrative Officer | Strategic Growth Dossier",
+  title: 'Strategic Growth | CAO Dossier - Julio Ponder Seneres',
 
   description:
-    "Public institutional dossier documenting the strategic governance, executive risk, LatAm investment, AI governance, and institutional growth framework of Julio Ponder Seneres.",
+    "Institutional dossier documenting the strategic governance, executive risk, investment, international expansion, AI governance, and institutional growth framework of Julio Ponder Seneres.",
 
   keywords: [
     "Julio Ponder Seneres",
-    "Julio Ponder Seneres Chief Administrative Officer",
     "Julio Ponder Seneres CAO",
-    "CAO dossier",
+    "Chief Administrative Officer",
     "Strategic Growth Dossier",
     "Executive Dossier",
-    "Executive Risk Doctrine",
-    "LatAm Investment Doctrine",
+    "Strategic Governance",
+    "Executive Risk Governance",
+    "LatAm Investment",
+    "International Expansion",
     "AI Governance",
-    "Institutional Governance",
+    "Institutional Growth",
+    "Contra Atlantis Group",
   ],
 
   authors: [
     {
       name: "Contra Atlantis Group",
+      url: SITE_URL,
     },
   ],
 
   creator: "Contra Atlantis Group",
   publisher: "Contra Atlantis Group",
+
+  category: "Business",
 
   alternates: {
     canonical: CAO_DOSSIER_URL,
@@ -60,7 +60,7 @@ export const julioPonderMetadata: Metadata = {
   },
 
   openGraph: {
-    type: "website",
+    type: "profile",
 
     url: CAO_DOSSIER_URL,
 
@@ -68,16 +68,16 @@ export const julioPonderMetadata: Metadata = {
 
     locale: "en_US",
 
-    title:
-      "Julio Ponder Seneres — Strategic Growth Dossier",
+    title: "Julio Ponder Seneres | CAO — Strategic Growth Dossier",
 
     description:
-      "Institutional profile covering executive risk governance, strategic investment, international expansion, and AI governance.",
+      "Institutional profile covering strategic governance, executive risk, investment, international expansion, AI governance, and institutional growth.",
 
     images: [
       {
         url: CAO_OG_IMAGE,
-
+        width: 1200,
+        height: 630,
         alt:
           "Julio Ponder Seneres — Chief Administrative Officer Strategic Growth Dossier",
       },
@@ -87,12 +87,17 @@ export const julioPonderMetadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Julio Ponder Seneres — Strategic Growth Dossier",
+    title: "Julio Ponder Seneres — Strategic Growth Dossier",
 
     description:
-      "Institutional profile covering strategic governance, investment, risk, international expansion, and AI oversight.",
+      "Institutional profile covering strategic governance, investment, risk, international expansion, AI governance, and institutional growth.",
 
-    images: [CAO_OG_IMAGE],
+    images: [
+      {
+        url: CAO_OG_IMAGE,
+        alt:
+          "Julio Ponder Seneres — Strategic Growth Dossier",
+      },
+    ],
   },
 };
